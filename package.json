@@ -1,0 +1,36 @@
+{
+  "name": "link2aws",
+  "version": "1.0.0",
+  "description": "Convert ARN (Amazon Resource Name) to AWS Console link",
+  "main": "main.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "mocha": "^8.0.1",
+    "decache": "^4.6.0",
+    "glob": "^7.1.6",
+    "istanbul": "^0.4.5",
+    "nyc": "^15.1.0",
+    "remap-istanbul": "^0.13.0",
+    "unit.js": "^2.1.1"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/link2aws/link2aws.git"
+  },
+  "author": "Felix Kaiser",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/link2aws/link2aws/issues"
+  },
+  "homepage": "https://github.com/link2aws/link2aws#readme",
+  "files": [
+    "link2aws.js"
+  ]
+}
