@@ -1,0 +1,26 @@
+[
+    ":",
+    "::",
+    ":::",
+    "::::",
+    ":::::",
+    "::::::",
+    ":::::::",
+    "::::::::",
+    ":::::::::",
+    "::::::::::",
+
+    "arn-UNSUPPORTED:aws:iam::123456789012:user/test",
+    "arn:aws-UNSUPPORTED:iam::123456789012:user/test",
+    "arn:aws:UNSUPPORTED::123456789012:user/test",
+
+    "arn:aws:iam::123456789012:UNSUPPORTED/test",
+    
+    "arn:aws:s3:::UNSUPPORTED:abcdefgh1234",
+
+    "arn:aws:route53:::UNSUPPORTED/12345ABCDEFGHI",
+
+    "arn:aws:acm:us-east-1:123456789012:UNSUPPORTED/1f6ee793-4064-4a10-9567-f03875640b35",
+
+    "arn:aws:ec2:us-east-1:123456789012:UNSUPPORTED/1234"
+]

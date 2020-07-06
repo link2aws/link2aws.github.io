@@ -1,0 +1,6 @@
+{
+    "arn:aws:iam::123456789012:user/test": "https://console.aws.amazon.com/iam/home?#/users/test",
+    "  arn:aws:iam::123456789012:user/test": "https://console.aws.amazon.com/iam/home?#/users/test",
+    "arn:aws:iam::123456789012:user/test  ": "https://console.aws.amazon.com/iam/home?#/users/test",
+    "  arn:aws:iam::123456789012:user/test  ": "https://console.aws.amazon.com/iam/home?#/users/test"
+}
