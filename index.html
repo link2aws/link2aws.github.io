@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>link2aws</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='index.css'>
+    <script>var exports = {};</script>
+    <script src='link2aws.js'></script>
+</head>
+
+<body>
+    <div>
+        <div>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h1>link2aws.github.io</h1>
+            </div>
+            <div class="section">
+                Copy/paste <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html" class="unimportant-link" title="Amazon Resource Name">ARN</a>, get direct link to AWS console:
+            </div>
+            <div class="section">
+                <input
+                    id="text"
+                    type="text"
+                    placeholder="ex.: arn:aws:iam::aws:policy/AdministratorAccess" />
+            </div>            
+            <div id="link-container" class="section">
+                <noscript>
+                    This page requires JavaScript.<br />
+                    Or you could mail me a letter with the ARN and I can reply with the link. ;-)
+                </noscript>
+                &nbsp;
+            </div>
+        </div>
+
+        <div>  
+            <div class="section unimportant-text">
+                <div>
+                    Found a problem? Missing a resource type? <a href="https://github.com/link2aws/link2aws/issues/new">Report it!</a>
+                </div>
+            </div>      
+        </div>
+    </div>
+    
+    <script>
+        function onLoad() {
+            var elem = document.getElementById("text");
+            elem.onchange = onUpdate;
+            elem.onclick = onUpdate;
+            elem.oninput = onUpdate;
+            elem.onpaste = onUpdate;
+            elem.onkeyup = onKeyUp;
+
+            //document.getElementById("text").value = "arn:aws:iam::aws:policy/AdministratorAccess";
+            onUpdate();
+        }
+
+        function onUpdate() {
+            var container = document.getElementById("link-container");
+            var input = document.getElementById("text").value;
+
+            console.log(input);    
+
+            var output;
+            try {
+                container.innerHTML = '';
+                var link = new ARN(input).consoleLink;
+                var a = document.createElement('a');
+                a.setAttribute('href', link);
+                a.setAttribute('id', 'link');
+                a.innerText = link;
+                container.appendChild(a);
+            } catch (e) {
+                container.innerHTML = '&zwnj;';
+                console.log(input, e);
+            }
+        }
+
+        function onKeyUp(e) {
+            if (e.key !== 'Enter') {
+                return onUpdate();
+            }
+
+            var a = document.getElementById('link');
+            if (a) {
+                location.href = a.innerText;
+            }
+        }
+
+        onLoad();
+    </script>
+</body>
+
+</html>

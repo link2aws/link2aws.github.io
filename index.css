@@ -1,0 +1,64 @@
+/* horizontal flex */
+body > div {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* vertical flex */
+body>div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+/* width of all content */
+@media all {
+    .section {
+        width: 90%;
+        max-width: 90%;
+    }
+}
+@media screen and (min-width: 48em) {
+    .section {
+        width: 46em;
+        max-width: 46em;
+    }
+}
+input {
+    display: block;
+    width: 90%;
+}
+
+/* spacing between sections */
+.section {
+    margin: 2em;
+}
+
+.container {
+    background-color: #eee;
+    border-radius: 1em;
+    margin: 1em;
+}
+
+/* deemphasis */
+a.unimportant-link:link, a.unimportant-link:visited {
+    text-decoration: none;
+}
+.unimportant-text {
+    color: grey;
+}
+
+/* no JS warning */
+noscript {
+    font-weight: bold;
+    color: darkorange;
+}
