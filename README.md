@@ -14,9 +14,9 @@ Copyright (c) 2020, Felix Kaiser. License: [ISC](https://spdx.org/licenses/ISC.h
 ### Use via JavaScript API
 
 ```js
->>> var link2aws = require('link2aws');
->>> new link2aws.ARN('arn:aws:s3:::abcdefgh1234').consoleLink
-"https://s3.console.aws.amazon.com/s3/buckets/abcdefgh1234"
+var link2aws = require('link2aws');
+new link2aws.ARN('arn:aws:s3:::abcdefgh1234').consoleLink
+// https://s3.console.aws.amazon.com/s3/buckets/abcdefgh1234
 ```
 
 If the ARN is invalid, or we valid but we have no link for it, an exception is thrown.
