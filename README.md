@@ -2,6 +2,10 @@
 
 Copy/paste ARN, get direct link to AWS console
 
+<a href="https://link2aws.github.io">
+<img src="screenshot.png" alt="Screenshot of link2aws.github.io" />
+</a>
+
 Copyright (c) 2020, Felix Kaiser. License: [ISC](https://spdx.org/licenses/ISC.html)
 
 ## How to...
