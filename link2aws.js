@@ -624,7 +624,7 @@ class ARN {
         },
         "lambda": { // AWS Lambda
             "event-source-mapping": null,
-            "function": null,
+            "function": () => `https://${this.region}.${this.console}/lambda/home?region=${this.region}#/functions/${this.resource}`,
             "layer": null,
         },
         "lex": { // Amazon Lex
