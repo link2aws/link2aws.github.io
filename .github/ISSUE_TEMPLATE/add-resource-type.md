@@ -11,7 +11,7 @@ Info:
 
 * ARN: 
 * AWS console URL for above ARN: 
-* Screenshot of AWS console at above URL:   <!-- optional! but useful especially if resource cannot be created for free) -->
+* Screenshot of AWS console at above URL:   <!-- optional! but useful especially if resource cannot be created for free -->
 
 <!--
 Notes:
