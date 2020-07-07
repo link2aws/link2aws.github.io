@@ -10,12 +10,36 @@ Copyright (c) 2020, Felix Kaiser. License: [ISC](https://spdx.org/licenses/ISC.h
 
 ## How to...
 
-### Use interactively
+### Use as website
 
-* Online: go to [link2aws.github.io](https://link2aws.github.io) (privacy notice: it runs in the browser and does *not* send your input anywhere)
-* Self-hosted: clone the repo, open `index.html` in your browser (there is no build step)
+Go to [link2aws.github.io](https://link2aws.github.io) (privacy notice: it runs in the browser and does *not* send your input anywhere)
 
-### Use via JavaScript API
+Or run directly from source:
+
+```sh
+# git clone https://github.com/link2aws/link2aws.github.io
+# firefox link2aws.github.io/index.html
+```
+
+### Use as command line tool
+
+Via NPM:
+
+```sh
+# npm install -g link2aws
+# link2aws arn:aws:s3:::abcdefgh1234
+https://s3.console.aws.amazon.com/s3/buckets/abcdefgh1234
+```
+
+Or clone the repo and run the file (no setup required):
+
+```sh
+# git clone https://github.com/link2aws/link2aws.github.io
+# link2aws.github.io/link2aws.js arn:aws:s3:::abcdefgh1234
+https://s3.console.aws.amazon.com/s3/buckets/abcdefgh1234
+```
+
+### Use as JavaScript library
 
 ```js
 var link2aws = require('link2aws');

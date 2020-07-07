@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 // https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html
 // https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/resource-ids.html
 class ARN {
@@ -1025,6 +1027,18 @@ class ARN {
             "group": null,
             "sampling-rule": null,
         },
+    }
+}
+
+// Running as command line script? (not in browser, and not as library)
+/* istanbul ignore if */
+if (typeof (require) !== 'undefined' && require.main === module) {
+    for (let i = 2; i < process.argv.length; i++) {
+        try {
+            console.log(new ARN(process.argv[i]).consoleLink);
+        } catch (e) {
+            console.error(e);
+        }
     }
 }
 
