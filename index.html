@@ -81,7 +81,7 @@
                 a.innerText = link;
                 container.appendChild(a);
             } catch (e) {
-                container.innerHTML = '&zwnj;';
+                container.innerHTML = '<span class="unimportant-text">No (supported) ARN detected.</span>'
                 console.log(input, e);
             }
         }
