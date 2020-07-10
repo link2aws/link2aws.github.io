@@ -6,22 +6,28 @@ class ARN {
     constructor(text) {
         text = text.trim();
 
+        // split into tokens; leaving resource-id with colons together
+        var firstTokens = text.split(':');
+        var tokens = firstTokens.splice(0, 6);
+        if (firstTokens.length > 0) {
+            tokens.push(firstTokens.join(':'));
+        }
+
         // arn:partition:service:region:account-id:...
-        var tokens = text.split(":", 7);
         this.prefix = tokens[0];
         this.partition = tokens[1];
         this.service = tokens[2];
         this.region = tokens[3];
         this.account = tokens[4];
 
-        // ...:resource-type:resource-id
+        // ...:resource-type:resource-id (resource-id can contain colons!)
         if (typeof (tokens[6]) != 'undefined') {
             this.resource_type = tokens[5];
             this.resource = tokens[6];
             this.hasPath = false;
         }
 
-        // ...:resource-type/resource-id
+        // ...:resource-type/resource-id (resource-id can contain slashes!)
         else if (typeof (tokens[5]) != 'undefined' && tokens[5].indexOf('/') > 0) {
             this.resource_type = tokens[5].slice(0, tokens[5].indexOf('/'));
             this.resource = tokens[5].slice(tokens[5].indexOf('/') + 1, tokens[5].length);
@@ -62,6 +68,10 @@ class ARN {
             default:
                 throw Error(`Bad/unsupported AWS partition: ${this.partition}`);
         }
+    }
+
+    get qualifiers() {        
+        return this.resource.split(':');        
     }
 
     get pathLast() {
@@ -625,7 +635,7 @@ class ARN {
         "lambda": { // AWS Lambda
             "event-source-mapping": null,
             "function": () => `https://${this.region}.${this.console}/lambda/home?region=${this.region}#/functions/${this.resource}`,
-            "layer": null,
+            "layer": () => `https://${this.region}.${this.console}/lambda/home?region=${this.region}#/layers/${this.qualifiers[0]}/versions/${this.qualifiers[1] || 1}`,
         },
         "lex": { // Amazon Lex
             "bot": null,

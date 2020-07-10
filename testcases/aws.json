@@ -14,6 +14,8 @@
     "arn:aws:iam::123456789012:user/test": "https://console.aws.amazon.com/iam/home?#/users/test",
 
     "arn:aws:lambda:us-west-1:123456789012:function:my-lambda": "https://us-west-1.console.aws.amazon.com/lambda/home?region=us-west-1#/functions/my-lambda",
+    "arn:aws:lambda:us-west-1:123456789012:layer:test": "https://us-west-1.console.aws.amazon.com/lambda/home?region=us-west-1#/layers/test/versions/1",
+    "arn:aws:lambda:us-west-1:123456789012:layer:test:123": "https://us-west-1.console.aws.amazon.com/lambda/home?region=us-west-1#/layers/test/versions/123",
 
     "arn:aws:route53:::healthcheck/b48b0df4-79df-4e41-b69b-9a48b8ebef04": "https://console.aws.amazon.com/route53/healthchecks/home",
     "arn:aws:route53:::hostedzone/12345ABCDEFGHI": "https://console.aws.amazon.com/route53/home?#resource-record-sets:12345ABCDEFGHI",
