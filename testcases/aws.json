@@ -13,6 +13,8 @@
     "arn:aws:route53:::trafficpolicy/4869e13a-1e77-457f-a15e-d0bed0584175": "https://console.aws.amazon.com/route53/trafficflow/home#/policy/4869e13a-1e77-457f-a15e-d0bed0584175",
     "arn:aws:route53:::trafficpolicyinstance/6461c3a8-3572-4d56-a65b-5dd1c4470cb7": "https://console.aws.amazon.com/route53/trafficflow/home#/modify-records/edit/6461c3a8-3572-4d56-a65b-5dd1c4470cb7",
 
+    "arn:aws:access-analyzer:us-west-1:123456789012:analyzer/ConsoleAnalyzer-a1e73456-f62e-4803-abc0-df02b4241122": "https://us-west-1.console.aws.amazon.com/access-analyzer/home?region=us-west-1#/analyzer/ConsoleAnalyzer-a1e73456-f62e-4803-abc0-df02b4241122",
+
     "arn:aws:acm:us-east-1:123456789012:certificate/1f6ee793-4064-4a10-9567-f03875640b35": "https://console.aws.amazon.com/acm/home?region=us-east-1#/?id=1f6ee793-4064-4a10-9567-f03875640b35",
 
     "arn:aws:lambda:us-west-1:123456789012:function:my-lambda": "https://us-west-1.console.aws.amazon.com/lambda/home?region=us-west-1#/functions/my-lambda",
