@@ -51,6 +51,10 @@ If the ARN is invalid, or valid but we have no link for it, an exception is thro
 
 ### Add support for resource types
 
+It's super easy - see [this example](https://github.com/link2aws/link2aws.github.io/commit/0432ecbbe522dbbd7e746caeeb4a7d1a6be5f057).
+
+Pull requests welcome!
+
 #### Add code
 
 * Support for new resource types: see large dict at the end of `link2aws.js`
