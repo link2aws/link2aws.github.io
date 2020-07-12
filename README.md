@@ -1,7 +1,5 @@
 # link2aws
 
-![Node.js CI](https://github.com/link2aws/link2aws.github.io/workflows/Node.js%20CI/badge.svg)
-
 Copy/paste ARN, get direct link to AWS console
 
 <a href="https://link2aws.github.io">
@@ -9,6 +7,8 @@ Copy/paste ARN, get direct link to AWS console
 </a>
 
 Copyright (c) 2020, Felix Kaiser. License: [ISC](https://spdx.org/licenses/ISC.html)
+
+![Node.js CI](https://github.com/link2aws/link2aws.github.io/workflows/Node.js%20CI/badge.svg)
 
 ## How to...
 
