@@ -49,6 +49,14 @@ new link2aws.ARN('arn:aws:s3:::abcdefgh1234').consoleLink
 // https://s3.console.aws.amazon.com/s3/buckets/abcdefgh1234
 ```
 
+Or:
+
+```js
+import { ARN } from 'link2aws';
+new ARN('arn:aws:s3:::abcdefgh1234').consoleLink;
+// https://s3.console.aws.amazon.com/s3/buckets/abcdefgh1234
+```
+
 If the ARN is invalid, or valid but we have no link for it, an exception is thrown.
 
 ### Add support for resource types
