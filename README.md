@@ -37,7 +37,7 @@ Or clone the repo and run the file (no setup required):
 
 ```sh
 # git clone https://github.com/link2aws/link2aws.github.io
-# link2aws.github.io/link2aws.js arn:aws:s3:::abcdefgh1234
+# node link2aws.github.io/link2aws.js arn:aws:s3:::abcdefgh1234
 https://s3.console.aws.amazon.com/s3/buckets/abcdefgh1234
 ```
 
