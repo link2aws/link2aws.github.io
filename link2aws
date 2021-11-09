@@ -1,0 +1,11 @@
+#!/usr/bin/env node
+
+let ARN = require("./link2aws.js").ARN;
+
+for (let i = 2; i < process.argv.length; i++) {
+    try {
+        console.log(new ARN(process.argv[i]).consoleLink);
+    } catch (e) {
+        console.error(e);
+    }
+}

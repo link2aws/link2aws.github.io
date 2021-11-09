@@ -31,9 +31,10 @@
   },
   "homepage": "https://github.com/link2aws/link2aws#readme",
   "files": [
-    "link2aws.js"
+    "link2aws.js",
+    "link2aws"
   ],
   "bin": {
-    "link2aws": "./link2aws.js"
+    "link2aws": "./link2aws"
   }
 }

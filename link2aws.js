@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-
 // https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html
 // https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/resource-ids.html
 class ARN {
