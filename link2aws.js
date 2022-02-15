@@ -541,7 +541,7 @@ class ARN {
                 "access-report": null,
                 "assumed-role": null,
                 "federated-user": null,
-                "group": null,
+                "group": () => `https://${this.console}/iamv2/home#/groups/details/${this.pathLast}`,
                 "instance-profile": null,
                 "mfa": null,
                 "oidc-provider": () => `https://${this.console}/iam/home?#/providers/${this.string}`,
@@ -963,7 +963,7 @@ class ARN {
             "states": { // AWS Step Functions
                 "activity": null,
                 "execution": null,
-                "stateMachine": null,
+                "stateMachine": () => `https://${this.region}.${this.console}/states/home?region=${this.region}#/statemachines/view/${this.string}`,
             },
             "storagegateway": { // Amazon Storage Gateway
                 "gateway": null,

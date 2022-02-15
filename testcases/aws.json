@@ -12,6 +12,7 @@
     "arn:aws:iam::aws:policy/AdministratorAccess": "https://console.aws.amazon.com/iam/home?#/policies/arn:aws:iam::aws:policy/AdministratorAccess",
     "arn:aws:iam::123456789012:role/aws-service-role/support.amazonaws.com/AWSServiceRoleForSupport": "https://console.aws.amazon.com/iam/home?#/roles/AWSServiceRoleForSupport",
     "arn:aws:iam::123456789012:user/test": "https://console.aws.amazon.com/iam/home?#/users/test",
+    "arn:aws:iam::123456789012:group/devs": "https://console.aws.amazon.com/iamv2/home#/groups/details/devs",
 
     "arn:aws:lambda:us-west-1:123456789012:function:my-lambda": "https://us-west-1.console.aws.amazon.com/lambda/home?region=us-west-1#/functions/my-lambda",
     "arn:aws:lambda:us-west-1:123456789012:layer:test": "https://us-west-1.console.aws.amazon.com/lambda/home?region=us-west-1#/layers/test/versions/1",
@@ -22,5 +23,7 @@
     "arn:aws:route53:::trafficpolicy/4869e13a-1e77-457f-a15e-d0bed0584175": "https://console.aws.amazon.com/route53/trafficflow/home#/policy/4869e13a-1e77-457f-a15e-d0bed0584175",
     "arn:aws:route53:::trafficpolicyinstance/6461c3a8-3572-4d56-a65b-5dd1c4470cb7": "https://console.aws.amazon.com/route53/trafficflow/home#/modify-records/edit/6461c3a8-3572-4d56-a65b-5dd1c4470cb7",
 
-    "arn:aws:s3:::abcdefgh1234": "https://s3.console.aws.amazon.com/s3/buckets/abcdefgh1234"
+    "arn:aws:s3:::abcdefgh1234": "https://s3.console.aws.amazon.com/s3/buckets/abcdefgh1234",
+
+    "arn:aws:states:us-east-1:123456789012:stateMachine:StateMachineName": "https://us-east-1.console.aws.amazon.com/states/home?region=us-east-1#/statemachines/view/arn:aws:states:us-east-1:123456789012:stateMachine:StateMachineName"
 }
