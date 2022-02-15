@@ -541,7 +541,7 @@ class ARN {
                 "access-report": null,
                 "assumed-role": null,
                 "federated-user": null,
-                "group": null,
+                "group": () => `https://${this.console}/iamv2/home#/groups/details/${this.pathLast}`,
                 "instance-profile": null,
                 "mfa": null,
                 "oidc-provider": () => `https://${this.console}/iam/home?#/providers/${this.string}`,
