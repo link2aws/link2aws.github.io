@@ -7,6 +7,8 @@
     "arn:aws:acm:us-east-1:123456789012:certificate/1f6ee793-4064-4a10-9567-f03875640b35": "https://console.aws.amazon.com/acm/home?region=us-east-1#/?id=1f6ee793-4064-4a10-9567-f03875640b35",
 
     "arn:aws:ec2:us-east-1:123456789012:instance/1234": "https://us-east-1.console.aws.amazon.com/ec2/v2/home",
+    "arn:aws:ec2:us-east-1:123456789012:subnet/subnet-12345612312312312" : "https://us-east-1.console.aws.amazon.com/vpc/home?region=us-east-1#SubnetDetails:subnetId=subnet-12345612312312312",
+    "arn:aws:ec2:us-east-1:123456789012:security-group/sg-12345123123123123": "https://us-east-1.console.aws.amazon.com/vpc/home?region=us-east-1#SecurityGroup:groupId=sg-12345123123123123",
 
     "arn:aws:iam::123456789012:oidc-provider/samples.auth0.com/authorize": "https://console.aws.amazon.com/iam/home?#/providers/arn:aws:iam::123456789012:oidc-provider/samples.auth0.com/authorize",
     "arn:aws:iam::aws:policy/AdministratorAccess": "https://console.aws.amazon.com/iam/home?#/policies/arn:aws:iam::aws:policy/AdministratorAccess",
@@ -26,4 +28,5 @@
     "arn:aws:s3:::abcdefgh1234": "https://s3.console.aws.amazon.com/s3/buckets/abcdefgh1234",
 
     "arn:aws:states:us-east-1:123456789012:stateMachine:StateMachineName": "https://us-east-1.console.aws.amazon.com/states/home?region=us-east-1#/statemachines/view/arn:aws:states:us-east-1:123456789012:stateMachine:StateMachineName"
-}
+
+  }
