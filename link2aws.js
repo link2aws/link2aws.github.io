@@ -361,7 +361,7 @@ class ARN {
             },
             "dynamodb": { // Amazon DynamoDB
                 "global-table": null,
-                "table": null,
+                "table": () => `https://${this.region}.${this.console}/dynamodbv2/home?region=${this.region}#table?name=${this.resource}`,
             },
             "ec2": { // AWS Systems Manager
                 "capacity-reservation": null,
@@ -942,6 +942,7 @@ class ARN {
             "sns": { // Amazon SNS
             },
             "sqs": { // Amazon SQS
+                "": () => `https://${this.region}.${this.console}/sqs/v2/home?region=${this.region}#/queues/https%3A%2F%2Fsqs.${this.region}.amazonaws.com%2F${this.account}%2F${this.resource}`
             },
             "ssm": { // AWS Systems Manager
                 "association": null,
