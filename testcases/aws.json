@@ -10,6 +10,8 @@
     "arn:aws:ec2:us-east-1:123456789012:subnet/subnet-12345612312312312" : "https://us-east-1.console.aws.amazon.com/vpc/home?region=us-east-1#SubnetDetails:subnetId=subnet-12345612312312312",
     "arn:aws:ec2:us-east-1:123456789012:security-group/sg-12345123123123123": "https://us-east-1.console.aws.amazon.com/vpc/home?region=us-east-1#SecurityGroup:groupId=sg-12345123123123123",
 
+    "arn:aws:dynamodb:us-east-1:123456789012:table/test": "https://us-east-1.console.aws.amazon.com/dynamodbv2/home?region=us-east-1#table?name=test",
+
     "arn:aws:iam::123456789012:oidc-provider/samples.auth0.com/authorize": "https://console.aws.amazon.com/iam/home?#/providers/arn:aws:iam::123456789012:oidc-provider/samples.auth0.com/authorize",
     "arn:aws:iam::aws:policy/AdministratorAccess": "https://console.aws.amazon.com/iam/home?#/policies/arn:aws:iam::aws:policy/AdministratorAccess",
     "arn:aws:iam::123456789012:role/aws-service-role/support.amazonaws.com/AWSServiceRoleForSupport": "https://console.aws.amazon.com/iam/home?#/roles/AWSServiceRoleForSupport",
@@ -26,6 +28,8 @@
     "arn:aws:route53:::trafficpolicyinstance/6461c3a8-3572-4d56-a65b-5dd1c4470cb7": "https://console.aws.amazon.com/route53/trafficflow/home#/modify-records/edit/6461c3a8-3572-4d56-a65b-5dd1c4470cb7",
 
     "arn:aws:s3:::abcdefgh1234": "https://s3.console.aws.amazon.com/s3/buckets/abcdefgh1234",
+
+    "arn:aws:sqs:us-east-1:123456789012:b6a826b4-b44b-11ec-8d84-acde48001122": "https://us-east-1.console.aws.amazon.com/sqs/v2/home?region=us-east-1#/queues/https%3A%2F%2Fsqs.us-east-1.amazonaws.com%2F123456789012%2Fb6a826b4-b44b-11ec-8d84-acde48001122",
 
     "arn:aws:states:us-east-1:123456789012:stateMachine:StateMachineName": "https://us-east-1.console.aws.amazon.com/states/home?region=us-east-1#/statemachines/view/arn:aws:states:us-east-1:123456789012:stateMachine:StateMachineName"
 
