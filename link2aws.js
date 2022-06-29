@@ -664,7 +664,7 @@ class ARN {
                 "StaticIp": null,
             },
             "logs": { // Amazon CloudWatch Logs
-                "log-group": null,
+                "log-group": () => `https://${this.region}.${this.console}/cloudwatch/home?region=${this.region}#logsV2:log-groups/log-group/${this.resource.replace(/:\*$/, "").replace(/#/g, "$2523").replace(/[/]/g, "$252F")}`,
             },
             "machinelearning": { // Amazon Machine Learning
                 "batchprediction": null,
