@@ -74,6 +74,11 @@ class ARN {
         return this.resource.split(':');        
     }
 
+    get pathAllButLast() {
+        // Example: "aws-service-role/support.amazonaws.com/AWSServiceRoleForSupport" -> "aws-service-role/support.amazonaws.com"
+        return this.resource.substr(0, this.resource.lastIndexOf('/'));
+    }
+
     get pathLast() {
         // Example: "aws-service-role/support.amazonaws.com/AWSServiceRoleForSupport" -> "AWSServiceRoleForSupport"
         return this.resource.substr(this.resource.lastIndexOf('/') + 1, this.resource.length);
@@ -412,10 +417,10 @@ class ARN {
                 "repository": null,
             },
             "ecs": { // Amazon Elastic Container Service
-                "cluster": null,
+                "cluster": () => `https://${this.region}.${this.console}/ecs/home?region=${this.region}#/clusters/${this.resource}`,
                 "container-instance": null,
                 "service": null,
-                "task": null,
+                "task": () => `https://${this.region}.${this.console}/ecs/home?region=${this.region}#/clusters/${this.pathAllButLast}/tasks/${this.pathLast}`,
                 "task-definition": null,
                 "task-set": null,
             },

@@ -10,6 +10,9 @@
     "arn:aws:ec2:us-east-1:123456789012:subnet/subnet-12345612312312312" : "https://us-east-1.console.aws.amazon.com/vpc/home?region=us-east-1#SubnetDetails:subnetId=subnet-12345612312312312",
     "arn:aws:ec2:us-east-1:123456789012:security-group/sg-12345123123123123": "https://us-east-1.console.aws.amazon.com/vpc/home?region=us-east-1#SecurityGroup:groupId=sg-12345123123123123",
 
+    "arn:aws:ecs:us-east-1:123456789012:cluster/mycluster": "https://us-east-1.console.aws.amazon.com/ecs/home?region=us-east-1#/clusters/mycluster",
+    "arn:aws:ecs:us-east-1:123456789012:task/mycluster/581a40b2431e6c9c23834b0760666c36": "https://us-east-1.console.aws.amazon.com/ecs/home?region=us-east-1#/clusters/mycluster/tasks/581a40b2431e6c9c23834b0760666c36",
+
     "arn:aws:dynamodb:us-east-1:123456789012:table/test": "https://us-east-1.console.aws.amazon.com/dynamodbv2/home?region=us-east-1#table?name=test",
 
     "arn:aws:iam::123456789012:oidc-provider/samples.auth0.com/authorize": "https://console.aws.amazon.com/iam/home?#/providers/arn:aws:iam::123456789012:oidc-provider/samples.auth0.com/authorize",
