@@ -405,7 +405,7 @@ class ARN {
                 "transit-gateway-multicast-domain": null,
                 "transit-gateway-route-table": null,
                 "volume": null,
-                "vpc": null,
+                "vpc": () => `https://${this.region}.${this.console}.aws.amazon.com/vpc/home?region=${this.region}#VpcDetails:VpcId=${this.resource}`,
                 "vpc-endpoint": null,
                 "vpc-endpoint-service": null,
                 "vpc-flow-log": null,
