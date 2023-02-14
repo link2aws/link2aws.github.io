@@ -419,7 +419,7 @@ class ARN {
             "ecs": { // Amazon Elastic Container Service
                 "cluster": () => `https://${this.region}.${this.console}/ecs/home?region=${this.region}#/clusters/${this.resource}`,
                 "container-instance": null,
-                "service": null,
+                "service": () => `https://${this.region}.${this.console}/ecs/home?region=${this.region}#/clusters/${this.pathAllButLast}/services/${this.pathLast}/details`,
                 "task": () => `https://${this.region}.${this.console}/ecs/home?region=${this.region}#/clusters/${this.pathAllButLast}/tasks/${this.pathLast}`,
                 "task-definition": null,
                 "task-set": null,
