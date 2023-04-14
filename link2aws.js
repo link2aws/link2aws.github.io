@@ -260,6 +260,7 @@ class ARN {
                 "association": null,
             },
             "codepipeline": { // AWS CodePipeline
+                "": () => `https://${this.region}.${this.console}/codesuite/codepipeline/pipelines/${this.resource}/view?region=${this.region}`,
                 "actiontype": null,
                 "webhook": null,
             },
