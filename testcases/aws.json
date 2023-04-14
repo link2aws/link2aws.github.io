@@ -40,6 +40,9 @@
 
     "arn:aws:sqs:us-east-1:123456789012:b6a826b4-b44b-11ec-8d84-acde48001122": "https://us-east-1.console.aws.amazon.com/sqs/v2/home?region=us-east-1#/queues/https%3A%2F%2Fsqs.us-east-1.amazonaws.com%2F123456789012%2Fb6a826b4-b44b-11ec-8d84-acde48001122",
 
-    "arn:aws:states:us-east-1:123456789012:stateMachine:StateMachineName": "https://us-east-1.console.aws.amazon.com/states/home?region=us-east-1#/statemachines/view/arn:aws:states:us-east-1:123456789012:stateMachine:StateMachineName"
+    "arn:aws:states:us-east-1:123456789012:stateMachine:StateMachineName": "https://us-east-1.console.aws.amazon.com/states/home?region=us-east-1#/statemachines/view/arn:aws:states:us-east-1:123456789012:stateMachine:StateMachineName",
 
+    "arn:aws:amplify:sa-east-1:384862141196:apps/aaaaaaaaa/branches/master/jobs/0000000181": "https://sa-east-1.console.aws.amazon.com/amplify/home?region=sa-east-1#/aaaaaaaaa/master/181",
+    "arn:aws:amplify:sa-east-1:384862141196:apps/aaaaaaaaa/branches/master/jobs/00000001810": "https://sa-east-1.console.aws.amazon.com/amplify/home?region=sa-east-1#/aaaaaaaaa/master/1810",
+    "arn:aws:amplify:sa-east-1:384862141196:apps/test-null-path": null
   }
