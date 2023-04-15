@@ -126,7 +126,16 @@ class ARN {
                 "certificate-authority": null,
             },
             "amplify": { // AWS Amplify
-                "apps": null,
+                "apps": () => {
+                    if(this.resource.includes('/jobs/')) {
+                        const resourceSplit = this.resource.split('/');
+                        const appID = resourceSplit[0];
+                        const branch = resourceSplit[2];
+                        const job = resourceSplit[resourceSplit.length - 1].replace(/^0+/, '');
+                        return `https://${this.region}.${this.console}/amplify/home?region=${this.region}#/${appID}/${branch}/${job}`;
+                    }
+                    return null;
+                },
             },
             "apigateway": { // Manage Amazon API Gateway
                 "": null,
@@ -251,6 +260,7 @@ class ARN {
                 "association": null,
             },
             "codepipeline": { // AWS CodePipeline
+                "": () => `https://${this.region}.${this.console}/codesuite/codepipeline/pipelines/${this.resource}/view?region=${this.region}`,
                 "actiontype": null,
                 "webhook": null,
             },
