@@ -17,12 +17,21 @@ class ARN {
         this.service = tokens[2];
         this.region = tokens[3];
         this.account = tokens[4];
+        this.resource_revision = '';
 
         // ...:resource-type:resource-id (resource-id can contain colons!)
         if (typeof (tokens[6]) != 'undefined') {
-            this.resource_type = tokens[5];
-            this.resource = tokens[6];
-            this.hasPath = false;
+            if (tokens[5].indexOf('/') > 0) {
+                this.resource_type = tokens[5].slice(0, tokens[5].indexOf('/'));
+                this.resource = tokens[5].slice(tokens[5].indexOf('/') + 1, tokens[5].length);
+                this.resource_revision = tokens[6]
+                this.hasPath = true;
+            }
+            else{
+                this.resource_type = tokens[5];
+                this.resource = tokens[6];
+                this.hasPath = false;
+            }
         }
 
         // ...:resource-type/resource-id (resource-id can contain slashes!)
@@ -51,7 +60,12 @@ class ARN {
         if (!this.resource_type) {
             return `${this.prefix}:${this.partition}:${this.service}:${this.region}:${this.account}:${this.resource}`;
         } else if (this.hasPath) {
-            return `${this.prefix}:${this.partition}:${this.service}:${this.region}:${this.account}:${this.resource_type}/${this.resource}`
+            if (this.resource_revision != '') {
+                return `${this.prefix}:${this.partition}:${this.service}:${this.region}:${this.account}:${this.resource_type}/${this.resource}:${this.resource_revision}`
+            }
+            else {
+                return `${this.prefix}:${this.partition}:${this.service}:${this.region}:${this.account}:${this.resource_type}/${this.resource}`
+            }
         } else {
             return `${this.prefix}:${this.partition}:${this.service}:${this.region}:${this.account}:${this.resource_type}:${this.resource}`
         }
@@ -431,7 +445,7 @@ class ARN {
                 "container-instance": null,
                 "service": () => `https://${this.region}.${this.console}/ecs/home?region=${this.region}#/clusters/${this.pathAllButLast}/services/${this.pathLast}/details`,
                 "task": () => `https://${this.region}.${this.console}/ecs/home?region=${this.region}#/clusters/${this.pathAllButLast}/tasks/${this.pathLast}`,
-                "task-definition": null,
+                "task-definition": () => `https://${this.region}.${this.console}/ecs/v2/task-definitions/${this.resource}/${this.resource_revision}?region=${this.region}`,
                 "task-set": null,
             },
             "eks": { // Amazon Elastic Container Service for Kubernetes
