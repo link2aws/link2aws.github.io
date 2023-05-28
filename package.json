@@ -1,6 +1,6 @@
 {
   "name": "link2aws",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "description": "Convert ARN (Amazon Resource Name) to AWS Console link",
   "main": "link2aws.js",
   "directories": {
