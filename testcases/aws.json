@@ -49,4 +49,4 @@
     "arn:aws:amplify:sa-east-1:384862141196:apps/test-null-path": null,
     
     "arn:aws:codepipeline:us-east-1:115131055398:my-pipeline": "https://us-east-1.console.aws.amazon.com/codesuite/codepipeline/pipelines/my-pipeline/view?region=us-east-1"
-  }
+}
