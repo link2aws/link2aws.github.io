@@ -441,10 +441,10 @@ class ARN {
                 "repository": null,
             },
             "ecs": { // Amazon Elastic Container Service
-                "cluster": () => `https://${this.region}.${this.console}/ecs/home?region=${this.region}#/clusters/${this.resource}`,
+                "cluster": () => `https://${this.region}.${this.console}/ecs/v2/clusters/${this.resource}?region=${this.region}`,
                 "container-instance": null,
-                "service": () => `https://${this.region}.${this.console}/ecs/home?region=${this.region}#/clusters/${this.pathAllButLast}/services/${this.pathLast}/details`,
-                "task": () => `https://${this.region}.${this.console}/ecs/home?region=${this.region}#/clusters/${this.pathAllButLast}/tasks/${this.pathLast}`,
+                "service": () => `https://${this.region}.${this.console}/ecs/v2/clusters/${this.pathAllButLast}/services/${this.pathLast}?region=${this.region}`,
+                "task": () => `https://${this.region}.${this.console}/ecs/v2/clusters/${this.pathAllButLast}/tasks/${this.pathLast}?region=${this.region}`,
                 "task-definition": () => `https://${this.region}.${this.console}/ecs/v2/task-definitions/${this.resource}/${this.resource_revision}?region=${this.region}`,
                 "task-set": null,
             },
