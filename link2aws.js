@@ -728,7 +728,7 @@ class ARN {
                 "queues": null,
             },
             "medialive": { // AWS Elemental MediaLive
-                "channel": null,
+                "channel": () => `https://${this.region}.${this.console}/medialive/home?region=${this.region}#/channels/${this.resource}`,
                 "input": null,
                 "inputDevice": null,
                 "inputSecurityGroup": null,
