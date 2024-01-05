@@ -992,7 +992,7 @@ class ARN {
             },
             "states": { // AWS Step Functions
                 "activity": null,
-                "execution": null,
+                "execution": () => `https://${this.region}.${this.console}/states/home?region=${this.region}#/v2/executions/details/${this.string}`,
                 "stateMachine": () => `https://${this.region}.${this.console}/states/home?region=${this.region}#/statemachines/view/${this.string}`,
             },
             "storagegateway": { // Amazon Storage Gateway
