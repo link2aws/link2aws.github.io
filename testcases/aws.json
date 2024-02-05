@@ -51,5 +51,29 @@
     "arn:aws:amplify:sa-east-1:384862141196:apps/aaaaaaaaa/branches/master/jobs/00000001810": "https://sa-east-1.console.aws.amazon.com/amplify/home?region=sa-east-1#/aaaaaaaaa/master/1810",
     "arn:aws:amplify:sa-east-1:384862141196:apps/test-null-path": null,
     
-    "arn:aws:codepipeline:us-east-1:115131055398:my-pipeline": "https://us-east-1.console.aws.amazon.com/codesuite/codepipeline/pipelines/my-pipeline/view?region=us-east-1"
+    "arn:aws:codepipeline:us-east-1:115131055398:my-pipeline": "https://us-east-1.console.aws.amazon.com/codesuite/codepipeline/pipelines/my-pipeline/view?region=us-east-1",
+    
+    "arn:aws:cloudfront::123456789012:distribution/E2YDLZ26QPSF11": "https://console.aws.amazon.com/cloudfront/v4/home#/distributions/E2YDLZ26QPSF11",
+
+    "arn:aws:autoscaling:us-east-1:123456789012:autoScalingGroup:034d7396-90f3-r8si-88f5-ff1dcc0eb80e:autoScalingGroupName/test": "https://us-east-1.console.aws.amazon.com/ec2/home?region=us-east-1#AutoScalingGroupDetails:id=test;view=details",
+
+    "arn:aws:wafv2:us-east-1:123456789012:global/webacl/test/f8234ecc-8990-4e63-b25a-ec36764b7701": "https://console.aws.amazon.com/wafv2/homev2/web-acl/test/f8234ecc-8990-4e63-b25a-ec36764b7701/overview?region=global",
+    "arn:aws:wafv2:us-east-1:123456789012:regional/webacl/test/0089db7f-b629-4ba6-bdad-8b2f3ec31c86": "https://console.aws.amazon.com/wafv2/homev2/web-acl/test/0089db7f-b629-4ba6-bdad-8b2f3ec31c86/overview?region=us-east-1",
+
+    "arn:aws:sns:us-east-1:123456789012:sns-topic": "https://console.aws.amazon.com/sns/v3/home?region=us-east-1#/topic/arn:aws:sns:us-east-1:123456789012:sns-topic",
+
+    "arn:aws:rds:us-east-1:123456789012:db:test-db": "https://console.aws.amazon.com/rds/home?region=us-east-1#database:id=test-db",
+    "arn:aws:rds:us-east-1:123456789012:snapshot:rds:test-db-2024-02-04-22-12": "https://console.aws.amazon.com/rds/home?region=us-east-1#db-snapshot:id=rds:test-db-2024-02-04-22-12",
+    "arn:aws:rds:us-east-1:123456789012:subgrp:test-db": "https://console.aws.amazon.com/rds/home?region=us-east-1#db-subnet-group:id=test-db",
+    "arn:aws:rds:us-east-1:123456789012:og:test-db": "https://console.aws.amazon.com/rds/home?region=us-east-1#option-group-details:option-group-name=test-db",
+    "arn:aws:rds:us-east-1:123456789012:cluster:test-cluster": "https://console.aws.amazon.com/rds/home?region=us-east-1#database:id=test-cluster;is-cluster=true",
+
+    "arn:aws:kms:us-east-1:123456789012:key/4bd42b4b-af95-4698-b685-58d3296890fe": "https://console.aws.amazon.com/kms/home?region=us-east-1#/kms/keys/4bd42b4b-af95-4698-b685-58d3296890fe",
+
+    "arn:aws:eks:us-east-1:123456789012:cluster/test-cluster": "https://console.aws.amazon.com/eks/home?region=us-east-1#/clusters/test-cluster",
+    "arn:aws:eks:us-east-1:123456789012:nodegroup/test-cluster/test-workers/a2c51527-da50-031f-1130-c5d5d77be06c": "https://console.aws.amazon.com/eks/home?region=us-east-1#/clusters/test-cluster/nodegroups/test-workers",
+
+    "arn:aws:backup:us-east-1:123456789012:backup-vault:backups-primary": "https://console.aws.amazon.com/backup/home?region=us-east-1#/backupvaults/details/backups-primary",
+
+    "arn:aws:firehose:us-east-1:123456789012:deliverystream/test-stream": "https://console.aws.amazon.com/firehose/home?region=us-east-1#/details/test-stream/monitoring"
 }

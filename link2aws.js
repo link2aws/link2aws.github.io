@@ -12,6 +12,7 @@ class ARN {
         }
 
         // arn:partition:service:region:account-id:...
+        this.arn = text;
         this.prefix = tokens[0];
         this.partition = tokens[1];
         this.service = tokens[2];
@@ -187,14 +188,17 @@ class ARN {
                 "workgroup": null,
             },
             "autoscaling": { // Amazon EC2 Auto Scaling
-                "autoScalingGroup": null,
+                "autoScalingGroup": () => {
+                    const groupName = this.resource.split('/')[1];
+                    return `https://${this.region}.${this.console}/ec2/home?region=${this.region}#AutoScalingGroupDetails:id=${groupName};view=details`
+                },
                 "launchConfiguration": null,
             },
             "aws-marketplace": { // AWS Marketplace Catalog
             },
             "backup": { // AWS Backup
                 "backup-plan": null,
-                "backup-vault": null,
+                "backup-vault": () => `https://${this.console}/backup/home?region=${this.region}#/backupvaults/details/${this.resource}`,
             },
             "batch": { // AWS Batch
                 "job-definition": null,
@@ -228,7 +232,7 @@ class ARN {
                 "stackset": null,
             },
             "cloudfront": { // Amazon CloudFront
-                "distribution": null,
+                "distribution": () => `https://${this.console}/cloudfront/v4/home#/distributions/${this.resource}`,
                 "origin-access-identity": null,
                 "streaming-distribution": null,
             },
@@ -449,9 +453,14 @@ class ARN {
                 "task-set": null,
             },
             "eks": { // Amazon Elastic Container Service for Kubernetes
-                "cluster": null,
+                "cluster": () => `https://${this.console}/eks/home?region=${this.region}#/clusters/${this.resource}`,
                 "fargateprofile": null,
-                "nodegroup": null,
+                "nodegroup": () => {
+                    const arr = this.resource.split('/');
+                    const clusterName = arr[0];
+                    const nodegroupName = arr[1];
+                    return `https://${this.console}/eks/home?region=${this.region}#/clusters/${clusterName}/nodegroups/${nodegroupName}`
+                },
             },
             "elastic-inference": { // Amazon Elastic Inference
                 "elastic-inference-accelerator": null,
@@ -494,7 +503,7 @@ class ARN {
             "execute-api": { // Amazon API Gateway
             },
             "firehose": { // Amazon Kinesis Firehose
-                "deliverystream": null,
+                "deliverystream": () => `https://${this.console}/firehose/home?region=${this.region}#/details/${this.resource}/monitoring`,
             },
             "fms": { // AWS Firewall Manager
                 "policy": null,
@@ -660,7 +669,7 @@ class ARN {
             },
             "kms": { // AWS Key Management Service
                 "alias": null,
-                "key": null,
+                "key": () => `https://${this.console}/kms/home?region=${this.region}#/kms/keys/${this.resource}`,
             },
             "lambda": { // AWS Lambda
                 "event-source-mapping": null,
@@ -825,19 +834,19 @@ class ARN {
                 "resource-share-invitation": null,
             },
             "rds": { // Amazon RDS
-                "cluster": null,
+                "cluster": () => `https://${this.console}/rds/home?region=${this.region}#database:id=${this.resource};is-cluster=true`,
                 "cluster-endpoint": null,
                 "cluster-pg": null,
                 "cluster-snapshot": null,
-                "db": null,
+                "db": () => `https://${this.console}/rds/home?region=${this.region}#database:id=${this.resource}`,
                 "db-proxy": null,
                 "es": null,
-                "og": null,
+                "og": () => `https://${this.console}/rds/home?region=${this.region}#option-group-details:option-group-name=${this.resource}`,
                 "pg": null,
                 "ri": null,
                 "secgrp": null,
-                "snapshot": null,
-                "subgrp": null,
+                "snapshot": () => `https://${this.console}/rds/home?region=${this.region}#db-snapshot:id=${this.resource}`,
+                "subgrp": () => `https://${this.console}/rds/home?region=${this.region}#db-subnet-group:id=${this.resource}`,
                 "target": null,
                 "target-group": null,
             },
@@ -969,6 +978,7 @@ class ARN {
                 "": null,
             },
             "sns": { // Amazon SNS
+                "": () => `https://${this.console}/sns/v3/home?region=${this.region}#/topic/${this.arn}`,
             },
             "sqs": { // Amazon SQS
                 "": () => `https://${this.region}.${this.console}/sqs/v2/home?region=${this.region}#/queues/https%3A%2F%2Fsqs.${this.region}.amazonaws.com%2F${this.account}%2F${this.resource}`
@@ -1044,7 +1054,15 @@ class ARN {
                 "webacl": null,
                 "xssmatchset": null,
             },
-            "wafv2": { // AWS WAF V2
+            "wafv2": {  // AWS WAF V2
+                "global": () => {
+                    const resource = this.resource.replace("webacl/", "");
+                    return `https://${this.console}/wafv2/homev2/web-acl/${resource}/overview?region=global`
+                 },
+                 "regional": () => {
+                    const resource = this.resource.replace("webacl/", "");
+                    return `https://${this.console}/wafv2/homev2/web-acl/${resource}/overview?region=${this.region}`
+                 }
             },
             "wellarchitected": { // AWS Well-Architected Tool
                 "workload": null,
