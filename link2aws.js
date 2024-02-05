@@ -189,7 +189,10 @@ class ARN {
                 "workgroup": null,
             },
             "autoscaling": { // Amazon EC2 Auto Scaling
-                "autoScalingGroup": null,
+                "autoScalingGroup": () => {
+                    const groupName = this.resource.split('/')[1];
+                    return `https://${this.region}.console.aws.amazon.com/ec2/home?region=${this.region}#AutoScalingGroupDetails:id=${groupName};view=details`
+                },
                 "launchConfiguration": null,
             },
             "aws-marketplace": { // AWS Marketplace Catalog
