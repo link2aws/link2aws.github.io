@@ -200,7 +200,7 @@ class ARN {
             },
             "backup": { // AWS Backup
                 "backup-plan": null,
-                "backup-vault": null,
+                "backup-vault": () => `https://console.aws.amazon.com/backup/home?region=${this.region}#/backupvaults/details/${this.resource}`,
             },
             "batch": { // AWS Batch
                 "job-definition": null,
