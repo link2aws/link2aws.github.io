@@ -53,6 +53,8 @@ class ARN {
             throw Error("Bad number of tokens");
         }
 
+        console.log(this);
+
         this._linkTemplates = this._getLinkTemplates();
     }
 
@@ -228,7 +230,7 @@ class ARN {
                 "stackset": null,
             },
             "cloudfront": { // Amazon CloudFront
-                "distribution": null,
+                "distribution": () => `https://console.aws.amazon.com/cloudfront/v4/home#/distributions/${this.resource}`,
                 "origin-access-identity": null,
                 "streaming-distribution": null,
             },
