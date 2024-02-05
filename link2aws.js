@@ -505,7 +505,7 @@ class ARN {
             "execute-api": { // Amazon API Gateway
             },
             "firehose": { // Amazon Kinesis Firehose
-                "deliverystream": null,
+                "deliverystream": () => `https://console.aws.amazon.com/firehose/home?region=${this.region}#/details/${this.resource}/monitoring`,
             },
             "fms": { // AWS Firewall Manager
                 "policy": null,

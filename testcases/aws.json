@@ -73,5 +73,7 @@
     "arn:aws:eks:us-east-1:123456789012:cluster/test-cluster": "https://console.aws.amazon.com/eks/home?region=us-east-1#/clusters/test-cluster",
     "arn:aws:eks:us-east-1:123456789012:nodegroup/test-cluster/test-workers/a2c51527-da50-031f-1130-c5d5d77be06c": "https://console.aws.amazon.com/eks/home?region=us-east-1#/clusters/test-cluster/nodegroups/test-workers",
 
-    "arn:aws:backup:us-east-1:123456789012:backup-vault:backups-primary": "https://console.aws.amazon.com/backup/home?region=us-east-1#/backupvaults/details/backups-primary"
+    "arn:aws:backup:us-east-1:123456789012:backup-vault:backups-primary": "https://console.aws.amazon.com/backup/home?region=us-east-1#/backupvaults/details/backups-primary",
+
+    "arn:aws:firehose:us-east-1:123456789012:deliverystream/test-stream": "https://console.aws.amazon.com/firehose/home?region=us-east-1#/details/test-stream/monitoring"
 }
