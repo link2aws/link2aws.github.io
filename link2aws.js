@@ -666,7 +666,7 @@ class ARN {
             },
             "kms": { // AWS Key Management Service
                 "alias": null,
-                "key": null,
+                "key": () => `https://console.aws.amazon.com/kms/home?region=${this.region}#/kms/keys/${this.resource}`,
             },
             "lambda": { // AWS Lambda
                 "event-source-mapping": null,

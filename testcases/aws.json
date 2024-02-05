@@ -66,5 +66,7 @@
     "arn:aws:rds:us-east-1:123456789012:snapshot:rds:test-db-2024-02-04-22-12": "https://console.aws.amazon.com/rds/home?region=us-east-1#db-snapshot:id=rds:test-db-2024-02-04-22-12",
     "arn:aws:rds:us-east-1:123456789012:subgrp:test-db": "https://console.aws.amazon.com/rds/home?region=us-east-1#db-subnet-group:id=test-db",
     "arn:aws:rds:us-east-1:123456789012:og:test-db": "https://console.aws.amazon.com/rds/home?region=us-east-1#option-group-details:option-group-name=test-db",
-    "arn:aws:rds:us-east-1:123456789012:cluster:test-cluster": "https://console.aws.amazon.com/rds/home?region=us-east-1#database:id=test-cluster;is-cluster=true"
+    "arn:aws:rds:us-east-1:123456789012:cluster:test-cluster": "https://console.aws.amazon.com/rds/home?region=us-east-1#database:id=test-cluster;is-cluster=true",
+
+    "arn:aws:kms:us-east-1:123456789012:key/4bd42b4b-af95-4698-b685-58d3296890fe": "https://console.aws.amazon.com/kms/home?region=us-east-1#/kms/keys/4bd42b4b-af95-4698-b685-58d3296890fe"
 }
