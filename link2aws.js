@@ -455,9 +455,14 @@ class ARN {
                 "task-set": null,
             },
             "eks": { // Amazon Elastic Container Service for Kubernetes
-                "cluster": null,
+                "cluster": () => `https://console.aws.amazon.com/eks/home?region=${this.region}#/clusters/${this.resource}`,
                 "fargateprofile": null,
-                "nodegroup": null,
+                "nodegroup": () => {
+                    const arr = this.resource.split('/');
+                    const clusterName = arr[0];
+                    const nodegroupName = arr[1];
+                    return `https://console.aws.amazon.com/eks/home?region=${this.region}#/clusters/${clusterName}/nodegroups/${nodegroupName}`
+                },
             },
             "elastic-inference": { // Amazon Elastic Inference
                 "elastic-inference-accelerator": null,
