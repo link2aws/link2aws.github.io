@@ -12,6 +12,7 @@ class ARN {
         }
 
         // arn:partition:service:region:account-id:...
+        this.arn = text;
         this.prefix = tokens[0];
         this.partition = tokens[1];
         this.service = tokens[2];
@@ -974,6 +975,7 @@ class ARN {
                 "": null,
             },
             "sns": { // Amazon SNS
+                "": () => `https://${this.console}/sns/v3/home?region=${this.region}#/topic/${this.arn}`,
             },
             "sqs": { // Amazon SQS
                 "": () => `https://${this.region}.${this.console}/sqs/v2/home?region=${this.region}#/queues/https%3A%2F%2Fsqs.${this.region}.amazonaws.com%2F${this.account}%2F${this.resource}`
