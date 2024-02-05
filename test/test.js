@@ -13,6 +13,7 @@ describe('main.ARN', function () {
 
         it('should tokenize ARNs without resource-type', function () {
             var arn = new main.ARN('arn:partition:service:region:account-id:resource-id');
+            assert.equal(arn.arn, 'arn:partition:service:region:account-id:resource-id');
             assert.equal(arn.prefix, 'arn');
             assert.equal(arn.partition, 'partition');
             assert.equal(arn.service, 'service');
@@ -24,6 +25,7 @@ describe('main.ARN', function () {
 
         it('should tokenize ARNs with resource-type/resource-id', function () {
             var arn = new main.ARN('arn:partition:service:region:account-id:resource-type/resource-id');
+            assert.equal(arn.arn, 'arn:partition:service:region:account-id:resource-type/resource-id')
             assert.equal(arn.prefix, 'arn');
             assert.equal(arn.partition, 'partition');
             assert.equal(arn.service, 'service');
@@ -35,6 +37,7 @@ describe('main.ARN', function () {
 
         it('should tokenize ARNs with resource-type:resource-id', function () {
             var arn = new main.ARN('arn:partition:service:region:account-id:resource-type:resource-id');
+            assert.equal(arn.arn, 'arn:partition:service:region:account-id:resource-type:resource-id');
             assert.equal(arn.prefix, 'arn');
             assert.equal(arn.partition, 'partition');
             assert.equal(arn.service, 'service');
@@ -47,6 +50,7 @@ describe('main.ARN', function () {
 
         it('should tokenize ARNs with resource-type:resource-id-qualifier-1:qualifier-2:qualifier-3', function () {
             var arn = new main.ARN('arn:partition:service:region:account-id:resource-type:resource-id-qualifier-1:qualifier-2:qualifier-3');
+            assert.equal(arn.arn, 'arn:partition:service:region:account-id:resource-type:resource-id-qualifier-1:qualifier-2:qualifier-3');
             assert.equal(arn.prefix, 'arn');
             assert.equal(arn.partition, 'partition');
             assert.equal(arn.service, 'service');

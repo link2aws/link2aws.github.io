@@ -54,8 +54,6 @@ class ARN {
             throw Error("Bad number of tokens");
         }
 
-        console.log(this);
-
         this._linkTemplates = this._getLinkTemplates();
     }
 
@@ -192,7 +190,7 @@ class ARN {
             "autoscaling": { // Amazon EC2 Auto Scaling
                 "autoScalingGroup": () => {
                     const groupName = this.resource.split('/')[1];
-                    return `https://${this.region}.console.aws.amazon.com/ec2/home?region=${this.region}#AutoScalingGroupDetails:id=${groupName};view=details`
+                    return `https://${this.region}.${this.console}/ec2/home?region=${this.region}#AutoScalingGroupDetails:id=${groupName};view=details`
                 },
                 "launchConfiguration": null,
             },
@@ -200,7 +198,7 @@ class ARN {
             },
             "backup": { // AWS Backup
                 "backup-plan": null,
-                "backup-vault": () => `https://console.aws.amazon.com/backup/home?region=${this.region}#/backupvaults/details/${this.resource}`,
+                "backup-vault": () => `https://${this.console}/backup/home?region=${this.region}#/backupvaults/details/${this.resource}`,
             },
             "batch": { // AWS Batch
                 "job-definition": null,
@@ -234,7 +232,7 @@ class ARN {
                 "stackset": null,
             },
             "cloudfront": { // Amazon CloudFront
-                "distribution": () => `https://console.aws.amazon.com/cloudfront/v4/home#/distributions/${this.resource}`,
+                "distribution": () => `https://${this.console}/cloudfront/v4/home#/distributions/${this.resource}`,
                 "origin-access-identity": null,
                 "streaming-distribution": null,
             },
@@ -455,13 +453,13 @@ class ARN {
                 "task-set": null,
             },
             "eks": { // Amazon Elastic Container Service for Kubernetes
-                "cluster": () => `https://console.aws.amazon.com/eks/home?region=${this.region}#/clusters/${this.resource}`,
+                "cluster": () => `https://${this.console}/eks/home?region=${this.region}#/clusters/${this.resource}`,
                 "fargateprofile": null,
                 "nodegroup": () => {
                     const arr = this.resource.split('/');
                     const clusterName = arr[0];
                     const nodegroupName = arr[1];
-                    return `https://console.aws.amazon.com/eks/home?region=${this.region}#/clusters/${clusterName}/nodegroups/${nodegroupName}`
+                    return `https://${this.console}/eks/home?region=${this.region}#/clusters/${clusterName}/nodegroups/${nodegroupName}`
                 },
             },
             "elastic-inference": { // Amazon Elastic Inference
@@ -505,7 +503,7 @@ class ARN {
             "execute-api": { // Amazon API Gateway
             },
             "firehose": { // Amazon Kinesis Firehose
-                "deliverystream": () => `https://console.aws.amazon.com/firehose/home?region=${this.region}#/details/${this.resource}/monitoring`,
+                "deliverystream": () => `https://${this.console}/firehose/home?region=${this.region}#/details/${this.resource}/monitoring`,
             },
             "fms": { // AWS Firewall Manager
                 "policy": null,
@@ -671,7 +669,7 @@ class ARN {
             },
             "kms": { // AWS Key Management Service
                 "alias": null,
-                "key": () => `https://console.aws.amazon.com/kms/home?region=${this.region}#/kms/keys/${this.resource}`,
+                "key": () => `https://${this.console}/kms/home?region=${this.region}#/kms/keys/${this.resource}`,
             },
             "lambda": { // AWS Lambda
                 "event-source-mapping": null,
@@ -836,19 +834,19 @@ class ARN {
                 "resource-share-invitation": null,
             },
             "rds": { // Amazon RDS
-                "cluster": () => `https://console.aws.amazon.com/rds/home?region=${this.region}#database:id=${this.resource};is-cluster=true`,
+                "cluster": () => `https://${this.console}/rds/home?region=${this.region}#database:id=${this.resource};is-cluster=true`,
                 "cluster-endpoint": null,
                 "cluster-pg": null,
                 "cluster-snapshot": null,
-                "db": () => `https://console.aws.amazon.com/rds/home?region=${this.region}#database:id=${this.resource}`,
+                "db": () => `https://${this.console}/rds/home?region=${this.region}#database:id=${this.resource}`,
                 "db-proxy": null,
                 "es": null,
-                "og": () => `https://console.aws.amazon.com/rds/home?region=${this.region}#option-group-details:option-group-name=${this.resource}`,
+                "og": () => `https://${this.console}/rds/home?region=${this.region}#option-group-details:option-group-name=${this.resource}`,
                 "pg": null,
                 "ri": null,
                 "secgrp": null,
-                "snapshot": () => `https://console.aws.amazon.com/rds/home?region=${this.region}#db-snapshot:id=${this.resource}`,
-                "subgrp": () => `https://console.aws.amazon.com/rds/home?region=${this.region}#db-subnet-group:id=${this.resource}`,
+                "snapshot": () => `https://${this.console}/rds/home?region=${this.region}#db-snapshot:id=${this.resource}`,
+                "subgrp": () => `https://${this.console}/rds/home?region=${this.region}#db-subnet-group:id=${this.resource}`,
                 "target": null,
                 "target-group": null,
             },
@@ -1059,11 +1057,11 @@ class ARN {
             "wafv2": {  // AWS WAF V2
                 "global": () => {
                     const resource = this.resource.replace("webacl/", "");
-                    return `https://console.aws.amazon.com/wafv2/homev2/web-acl/${resource}/overview?region=global`
+                    return `https://${this.console}/wafv2/homev2/web-acl/${resource}/overview?region=global`
                  },
                  "regional": () => {
                     const resource = this.resource.replace("webacl/", "");
-                    return `https://console.aws.amazon.com/wafv2/homev2/web-acl/${resource}/overview?region=${this.region}`
+                    return `https://${this.console}/wafv2/homev2/web-acl/${resource}/overview?region=${this.region}`
                  }
             },
             "wellarchitected": { // AWS Well-Architected Tool
