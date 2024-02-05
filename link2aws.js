@@ -1049,7 +1049,15 @@ class ARN {
                 "webacl": null,
                 "xssmatchset": null,
             },
-            "wafv2": { // AWS WAF V2
+            "wafv2": {  // AWS WAF V2
+                "global": () => {
+                    const resource = this.resource.replace("webacl/", "");
+                    return `https://console.aws.amazon.com/wafv2/homev2/web-acl/${resource}/overview?region=global`
+                 },
+                 "regional": () => {
+                    const resource = this.resource.replace("webacl/", "");
+                    return `https://console.aws.amazon.com/wafv2/homev2/web-acl/${resource}/overview?region=${this.region}`
+                 }
             },
             "wellarchitected": { // AWS Well-Architected Tool
                 "workload": null,
