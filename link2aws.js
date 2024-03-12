@@ -658,7 +658,7 @@ class ARN {
                 "index": null,
             },
             "kinesis": { // Amazon Kinesis
-                "stream": null,
+                "stream": () => `https://${this.region}.console.aws.amazon.com/kinesis/home?region=${this.region}#/streams/details/${this.resource}/details`,
             },
             "kinesisanalytics": { // Amazon Kinesis Analytics V2
                 "application": null,
