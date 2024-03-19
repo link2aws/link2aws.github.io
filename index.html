@@ -63,6 +63,18 @@
 
             //document.getElementById("text").value = "arn:aws:iam::aws:policy/AdministratorAccess";
             onUpdate();
+
+            // If the user passes in the arn as a parameter, immediately redirect them
+            var params = new URLSearchParams(window.location.search);
+            var arn = params.get('arn');
+            if (arn) {
+                elem.value = arn;
+                onUpdate();
+                var a = document.getElementById('link');
+                if (a) {
+                    location.href = a.innerText;
+                }
+            };
         }
 
         function onUpdate() {
