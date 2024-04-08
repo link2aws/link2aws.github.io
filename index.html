@@ -64,9 +64,8 @@
             //document.getElementById("text").value = "arn:aws:iam::aws:policy/AdministratorAccess";
             onUpdate();
 
-            // If the user passes in the arn as a parameter, immediately redirect them
-            var params = new URLSearchParams(window.location.search);
-            var arn = params.get('arn');
+            // If the user passes in the arn as a anchor, immediately redirect them
+            var arn = window.location.hash.replace('#', '');
             if (arn) {
                 elem.value = arn;
                 onUpdate();
@@ -112,5 +111,4 @@
         onLoad();
     </script>
 </body>
-
 </html>
