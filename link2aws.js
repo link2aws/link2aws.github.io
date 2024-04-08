@@ -2,7 +2,29 @@
 // https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/resource-ids.html
 class ARN {
     constructor(text) {
+        if (typeof(text) != 'string') {
+            throw Error("ARN must be a string");
+        }
+
         text = text.trim();
+
+        // length limit
+        // There is no documented limit for ARNs in general.
+        // For IAM User, the documented limit is 2048.
+        // Please file an issue if you can find a resource type
+        // with a higher documented limit.
+        if (text.length > 2048) {
+            throw Error("ARN too long");
+        }
+
+        // Check for invalid characters.
+        // This is meant to catch malicious inputs. This will not
+        // catch all invalid ARNs, as some resource types have
+        // stricter rules. Please file an issue if you are aware
+        // of a valid ARN that is rejected by this check.
+        if (!/^[a-zA-Z0-9:/+=,.@_*#\-]*$/.test(text)) {
+            throw Error("ARN contains invalid characters");
+        }
 
         // split into tokens; leaving resource-id with colons together
         var firstTokens = text.split(':');
@@ -52,6 +74,13 @@ class ARN {
         // anything else
         else {
             throw Error("Bad number of tokens");
+        }
+
+        // region must have valid format.
+        // This is security relevant as it is used as a subdomain
+        // before the console domain.
+        if (this.region != '' && !/^[a-z0-9-]*$/.test(this.region)) {
+            throw Error(`Bad region: "${this.region}"`);
         }
 
         this._linkTemplates = this._getLinkTemplates();
