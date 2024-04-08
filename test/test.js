@@ -8,7 +8,14 @@ var stringTests = require('../testcases/string.json');
 describe('main.ARN', function () {
     describe('#constructor(text)', function () {
         it('should reject invalid inputs by throwing', function () {
-            assert.throws(() => { main.ARN('foo') }, Error);
+            assert.throws(() => { new main.ARN('foo') }, Error);
+        });
+
+        it('should reject arguments that aren\'t strings', function () {
+            assert.throws(() => { new main.ARN(null) }, Error);
+            assert.throws(() => { new main.ARN(123) }, Error);
+            assert.throws(() => { new main.ARN([]) }, Error);
+            assert.throws(() => { new main.ARN({}) }, Error);
         });
 
         it('should tokenize ARNs without resource-type', function () {
