@@ -433,7 +433,7 @@ class ARN {
                 "dhcp-options": null,
                 "elastic-gpu": null,
                 "fpga-image": null,
-                "image": null,
+                "image": () => `https://${this.region}.${this.console}/ec2/home?region=${this.region}#ImageDetails:imageId=${this.resource}`,
                 "instance": () => `https://${this.region}.${this.console}/ec2/v2/home`,
                 "internet-gateway": null,
                 "key-pair": null,
