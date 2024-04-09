@@ -6,6 +6,7 @@
 
     "arn:aws:acm:us-east-1:123456789012:certificate/1f6ee793-4064-4a10-9567-f03875640b35": "https://console.aws.amazon.com/acm/home?region=us-east-1#/?id=1f6ee793-4064-4a10-9567-f03875640b35",
 
+    "arn:aws:ec2:us-west-1:136693071363:image/ami-0851c4af3ebd71c35": "https://us-west-1.console.aws.amazon.com/ec2/home?region=us-west-1#ImageDetails:imageId=ami-0851c4af3ebd71c35",
     "arn:aws:ec2:us-east-1:123456789012:instance/1234": "https://us-east-1.console.aws.amazon.com/ec2/v2/home",
     "arn:aws:ec2:us-east-1:123456789012:subnet/subnet-12345612312312312" : "https://us-east-1.console.aws.amazon.com/vpc/home?region=us-east-1#SubnetDetails:subnetId=subnet-12345612312312312",
     "arn:aws:ec2:us-east-1:123456789012:security-group/sg-12345123123123123": "https://us-east-1.console.aws.amazon.com/vpc/home?region=us-east-1#SecurityGroup:groupId=sg-12345123123123123",
