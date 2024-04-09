@@ -23,6 +23,11 @@ Or run directly from source:
 # firefox link2aws.github.io/index.html
 ```
 
+You can make links that auto-redirect to the AWS console by appending `#arn...` like this:
+
+https://link2aws.github.io/#arn:aws:ec2:us-west-1:136693071363:image/ami-0851c4af3ebd71c35
+
+
 ### Use as command line tool
 
 Via NPM:
