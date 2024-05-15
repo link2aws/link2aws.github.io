@@ -13,6 +13,7 @@
     "arn:aws:ec2:us-east-1:123456789012:snapshot/snap-123456": "https://us-east-1.console.aws.amazon.com/ec2/home?region=us-east-1#SnapshotDetails:snapshotId=snap-123456",
     "arn:aws:ec2:us-east-1:123456789012:volume/vol-123456" : "https://us-east-1.console.aws.amazon.com/ec2/home?region=us-east-1#VolumeDetails:volumeId=vol-123456",
     "arn:aws:ec2:us-east-1:123456789012:vpc/vpc-5432109876" : "https://us-east-1.console.aws.amazon.com/vpc/home?region=us-east-1#VpcDetails:VpcId=vpc-5432109876",
+    "arn:aws:ec2:us-east-1:123456789012:vpc-endpoint/vpce-123456": "https://us-east-1.console.aws.amazon.com/vpcconsole/home?region=us-east-1#EndpointDetails:vpcEndpointId=vpce-123456",
 
     "arn:aws:ecs:us-east-1:123456789012:cluster/mycluster": "https://us-east-1.console.aws.amazon.com/ecs/v2/clusters/mycluster?region=us-east-1",
     "arn:aws:ecs:us-east-1:123456789012:task/mycluster/581a40b2431e6c9c23834b0760666c36": "https://us-east-1.console.aws.amazon.com/ecs/v2/clusters/mycluster/tasks/581a40b2431e6c9c23834b0760666c36?region=us-east-1",

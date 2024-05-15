@@ -463,7 +463,7 @@ class ARN {
                 "transit-gateway-route-table": null,
                 "volume": () => `https://${this.region}.${this.console}/ec2/home?region=${this.region}#VolumeDetails:volumeId=${this.resource}`,
                 "vpc": () => `https://${this.region}.${this.console}/vpc/home?region=${this.region}#VpcDetails:VpcId=${this.resource}`,
-                "vpc-endpoint": null,
+                "vpc-endpoint": () => `https://${this.region}.${this.console}/vpcconsole/home?region=${this.region}#EndpointDetails:vpcEndpointId=${this.resource}`,
                 "vpc-endpoint-service": null,
                 "vpc-flow-log": null,
                 "vpc-peering-connection": null,
