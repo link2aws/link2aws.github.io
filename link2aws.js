@@ -450,7 +450,7 @@ class ARN {
                 "reserved-instances": null,
                 "route-table": null,
                 "security-group": () => `https://${this.region}.${this.console}/vpc/home?region=${this.region}#SecurityGroup:groupId=${this.resource}`,
-                "snapshot": null,
+                "snapshot": () => `https://${this.region}.${this.console}/ec2/home?region=${this.region}#SnapshotDetails:snapshotId=${this.resource}`,
                 "spot-instances-request": null,
                 "subnet": () => `https://${this.region}.${this.console}/vpc/home?region=${this.region}#SubnetDetails:subnetId=${this.resource}`,
                 "traffic-mirror-filter": null,
