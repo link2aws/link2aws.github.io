@@ -434,7 +434,7 @@ class ARN {
                 "elastic-gpu": null,
                 "fpga-image": null,
                 "image": () => `https://${this.region}.${this.console}/ec2/home?region=${this.region}#ImageDetails:imageId=${this.resource}`,
-                "instance": () => `https://${this.region}.${this.console}/ec2/v2/home`,
+                "instance": () => `https://${this.region}.${this.console}/ec2/home?region=${this.region}#InstanceDetails:instanceId=${this.resource}`,
                 "internet-gateway": null,
                 "key-pair": null,
                 "launch-template": null,
