@@ -438,7 +438,7 @@ class ARN {
                 "internet-gateway": null,
                 "natgateway": () => `https://${this.region}.${this.console}/vpcconsole/home?region=${this.region}#NatGatewayDetails:natGatewayId=${this.resource}`,
                 "key-pair": null,
-                "launch-template": null,
+                "launch-template": () => `https://${this.region}.${this.console}/ec2/home?region=${this.region}#LaunchTemplateDetails:launchTemplateId=${this.resource}`,
                 "local-gateway": null,
                 "local-gateway-route-table": null,
                 "local-gateway-route-table-virtual-interface-group-association": null,
