@@ -461,7 +461,7 @@ class ARN {
                 "transit-gateway-attachment": null,
                 "transit-gateway-multicast-domain": null,
                 "transit-gateway-route-table": null,
-                "volume": null,
+                "volume": () => `https://${this.region}.${this.console}/ec2/home?region=${this.region}#VolumeDetails:volumeId=${this.resource}`,
                 "vpc": () => `https://${this.region}.${this.console}/vpc/home?region=${this.region}#VpcDetails:VpcId=${this.resource}`,
                 "vpc-endpoint": null,
                 "vpc-endpoint-service": null,
