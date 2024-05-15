@@ -509,7 +509,7 @@ class ARN {
             "elasticloadbalancing": { // AWS WAF V2
                 "listener": null,
                 "listener-rule": null,
-                "loadbalancer": null,
+                "loadbalancer": () => `https://${this.region}.${this.console}/ec2/home?region=${this.region}#LoadBalancer:loadBalancerArn=${this.arn}`,
                 "targetgroup": null,
             },
             "elasticmapreduce": { // Amazon Elastic MapReduce
