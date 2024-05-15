@@ -436,6 +436,7 @@ class ARN {
                 "image": () => `https://${this.region}.${this.console}/ec2/home?region=${this.region}#ImageDetails:imageId=${this.resource}`,
                 "instance": () => `https://${this.region}.${this.console}/ec2/home?region=${this.region}#InstanceDetails:instanceId=${this.resource}`,
                 "internet-gateway": null,
+                "natgateway": () => `https://${this.region}.${this.console}/vpcconsole/home?region=${this.region}#NatGatewayDetails:natGatewayId=${this.resource}`,
                 "key-pair": null,
                 "launch-template": null,
                 "local-gateway": null,

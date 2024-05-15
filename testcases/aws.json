@@ -8,6 +8,7 @@
 
     "arn:aws:ec2:us-west-1:136693071363:image/ami-0851c4af3ebd71c35": "https://us-west-1.console.aws.amazon.com/ec2/home?region=us-west-1#ImageDetails:imageId=ami-0851c4af3ebd71c35",
     "arn:aws:ec2:us-east-1:123456789012:instance/1234": "https://us-east-1.console.aws.amazon.com/ec2/home?region=us-east-1#InstanceDetails:instanceId=1234",
+    "arn:aws:ec2:us-east-1:123456789012:natgateway/nat-123456": "https://us-east-1.console.aws.amazon.com/vpcconsole/home?region=us-east-1#NatGatewayDetails:natGatewayId=nat-123456",
     "arn:aws:ec2:us-east-1:123456789012:subnet/subnet-12345612312312312" : "https://us-east-1.console.aws.amazon.com/vpc/home?region=us-east-1#SubnetDetails:subnetId=subnet-12345612312312312",
     "arn:aws:ec2:us-east-1:123456789012:security-group/sg-12345123123123123": "https://us-east-1.console.aws.amazon.com/vpc/home?region=us-east-1#SecurityGroup:groupId=sg-12345123123123123",
     "arn:aws:ec2:us-east-1:123456789012:snapshot/snap-123456": "https://us-east-1.console.aws.amazon.com/ec2/home?region=us-east-1#SnapshotDetails:snapshotId=snap-123456",
