@@ -293,6 +293,9 @@ class ARN {
             },
             "codecommit": { // Amazon CodeGuru Reviewer
             },
+            "codeconnections": { // AWS CodeConnections
+                "connection": () => `https://${this.region}.${this.console}/codesuite/settings/${this.account}/${this.region}/${this.service}/${this.resource_type}s/${this.resource}`,
+            },
             "codedeploy": { // AWS CodeDeploy
                 "application": null,
                 "deploymentconfig": null,
@@ -315,7 +318,7 @@ class ARN {
                 "project": null,
             },
             "codestar-connections": { // AWS CodeStar Connections
-                "connection": null,
+                "connection": () => `https://${this.region}.${this.console}/codesuite/settings/${this.account}/${this.region}/${this.service}/${this.resource_type}s/${this.resource}`,
             },
             "codestar-notifications": { // AWS CodeStar Notifications
                 "notificationrule": null,
