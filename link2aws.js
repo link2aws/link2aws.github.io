@@ -978,7 +978,17 @@ class ARN {
                 "domain": null,
             },
             "secretsmanager": { // AWS Secrets Manager
-                "secret": null,
+                "secret": () => {
+                    if (this.resource.indexOf("-") === -1) {
+                        // all the secrets I've seen have a "-" delimited suffix
+                        // in the ARN that isn't part of the secret name. For
+                        // now just throwing if the suffix is missing, please
+                        // update if needed.
+                        throw Error(`Secret ARN for ${this.resource} missing suffix`);
+                    }
+                    const name = this.resource.split('-').slice(0, -1).join('-');
+                    return `https://${this.region}.${this.console}/${this.service}/${this.resource_type}?name=${name}`;
+                },
             },
             "securityhub": { // AWS Security Hub
                 "hub": null,
