@@ -86,6 +86,7 @@
     "arn:aws:firehose:us-east-1:123456789012:deliverystream/test-stream": "https://console.aws.amazon.com/firehose/home?region=us-east-1#/details/test-stream/monitoring",
 
     "arn:aws:codeconnections:us-west-2:384862141196:connection/f8234ecc-8990-4e63-b25a-ec36764b7701": "https://us-west-2.console.aws.amazon.com/codesuite/settings/384862141196/us-west-2/codeconnections/connections/f8234ecc-8990-4e63-b25a-ec36764b7701",
-    "arn:aws:codestar-connections:us-west-2:384862141196:connection/f8234ecc-8990-4e63-b25a-ec36764b7701": "https://us-west-2.console.aws.amazon.com/codesuite/settings/384862141196/us-west-2/codestar-connections/connections/f8234ecc-8990-4e63-b25a-ec36764b7701"
+    "arn:aws:codestar-connections:us-west-2:384862141196:connection/f8234ecc-8990-4e63-b25a-ec36764b7701": "https://us-west-2.console.aws.amazon.com/codesuite/settings/384862141196/us-west-2/codestar-connections/connections/f8234ecc-8990-4e63-b25a-ec36764b7701",
 
+    "arn:aws:secretsmanager:us-west-2:123456789012:secret:MySecret9A3F29-vdHtS43BP1i1-knwb3S": "https://us-west-2.console.aws.amazon.com/secretsmanager/secret?name=MySecret9A3F29-vdHtS43BP1i1"
 }

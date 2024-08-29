@@ -978,7 +978,14 @@ class ARN {
                 "domain": null,
             },
             "secretsmanager": { // AWS Secrets Manager
-                "secret": null,
+                "secret": () => {
+                    const arnSuffix = /-\w{6}$/;
+                    if (!arnSuffix.test(this.resource)) {
+                        throw Error(`Secret ARN for "${this.resource}" appears invalid, should end with ${arnSuffix}`);
+                    }
+                    const name = this.resource.replace(arnSuffix, "");
+                    return `https://${this.region}.${this.console}/${this.service}/${this.resource_type}?name=${name}`;
+                },
             },
             "securityhub": { // AWS Security Hub
                 "hub": null,

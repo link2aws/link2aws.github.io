@@ -38,5 +38,6 @@
     "arn:aws:ec2:us-ea st-1:123456789012:instance/asdf",
     "arn:aws:ec2:us-ea*st-1:123456789012:instance/asdf",
     "arn:aws:ec2:us-ea#st-1:123456789012:instance/asdf",
-    "arn:aws:ec2:us-ea\\st-1:123456789012:instance/asdf"
+    "arn:aws:ec2:us-ea\\st-1:123456789012:instance/asdf",
+    "arn:aws:secretsmanager:us-west-2:123456789012:secret:MySecret9A3F29-adf"
 ]
