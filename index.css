@@ -1,3 +1,6 @@
+:root {
+    color-scheme: light dark;
+}
 /* horizontal flex */
 body > div {
     position: absolute;
@@ -44,7 +47,7 @@ input {
 }
 
 .container {
-    background-color: #eee;
+    background-color: light-dark(#eee, #222);
     border-radius: 1em;
     margin: 1em;
 }
