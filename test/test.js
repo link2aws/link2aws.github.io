@@ -40,7 +40,19 @@ describe('main.ARN', function () {
             assert.equal(arn.account, 'account-id');
             assert.equal(arn.resource, 'resource-id');
             assert.equal(arn.resource_type, 'resource-type');
-        });        
+        });
+
+        it('should tokenize ARNs with /resource-type/resource-id', function () {
+            var arn = new main.ARN('arn:partition:service:region:account-id:/resource-type/resource-id');
+            assert.equal(arn.arn, 'arn:partition:service:region:account-id:/resource-type/resource-id')
+            assert.equal(arn.prefix, 'arn');
+            assert.equal(arn.partition, 'partition');
+            assert.equal(arn.service, 'service');
+            assert.equal(arn.region, 'region');
+            assert.equal(arn.account, 'account-id');
+            assert.equal(arn.resource, 'resource-id');
+            assert.equal(arn.resource_type, 'resource-type');
+        });
 
         it('should tokenize ARNs with resource-type:resource-id', function () {
             var arn = new main.ARN('arn:partition:service:region:account-id:resource-type:resource-id');

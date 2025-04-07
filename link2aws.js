@@ -57,8 +57,13 @@ class ARN {
             }
         }
 
-        // ...:resource-type/resource-id (resource-id can contain slashes!)
-        else if (typeof (tokens[5]) != 'undefined' && tokens[5].indexOf('/') > 0) {
+        // ...:resource-type/resource-id (common case)
+        // ...:/resource-type/resource-id (apigateway)
+        // resource-id can contain slashes.
+        else if (typeof (tokens[5]) != 'undefined' && tokens[5].slice(1).indexOf('/') >= 0) {
+            if (tokens[5].startsWith('/')) {
+                tokens[5] = tokens[5].slice(1);
+            }
             this.resource_type = tokens[5].slice(0, tokens[5].indexOf('/'));
             this.resource = tokens[5].slice(tokens[5].indexOf('/') + 1, tokens[5].length);
             this.hasPath = true;
@@ -182,7 +187,7 @@ class ARN {
                 },
             },
             "apigateway": { // Manage Amazon API Gateway
-                "": null,
+                "restapis": () => `https://${this.region}.${this.console}/apigateway/main/apis/${this.resource}/resources?api=${this.resource}&region=${this.region}`,
             },
             "appconfig": { // AWS AppConfig
                 "application": null,
