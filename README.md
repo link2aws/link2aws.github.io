@@ -6,7 +6,7 @@ Copy/paste ARN, get direct link to AWS console
 <img src="screenshot.png" alt="Screenshot of link2aws.github.io" />
 </a>
 
-Copyright (c) 2020, Felix Kaiser. License: [ISC](https://spdx.org/licenses/ISC.html)
+Copyright (c) 2020-2025, Felix Kaiser. License: [ISC](https://spdx.org/licenses/ISC.html)
 
 ![Node.js CI](https://github.com/link2aws/link2aws.github.io/workflows/Node.js%20CI/badge.svg)
 
