@@ -1,43 +1,43 @@
-[
-    ":",
-    "::",
-    ":::",
-    "::::",
-    ":::::",
-    "::::::",
-    ":::::::",
-    "::::::::",
-    ":::::::::",
-    "::::::::::",
+{
+    ":": null,
+    "::": null,
+    ":::": null,
+    "::::": null,
+    ":::::": null,
+    "::::::": null,
+    ":::::::": null,
+    "::::::::": null,
+    ":::::::::": null,
+    "::::::::::": null,
 
-    "arn-UNSUPPORTED:aws:iam::123456789012:user/test",
-    "arn:aws-UNSUPPORTED:iam::123456789012:user/test",
-    "arn:aws:UNSUPPORTED::123456789012:user/test",
+    "arn-UNSUPPORTED:aws:iam::123456789012:user/test": null,
+    "arn:aws-UNSUPPORTED:iam::123456789012:user/test": null,
+    "arn:aws:UNSUPPORTED::123456789012:user/test": null,
 
-    "arn:aws:iam::123456789012:UNSUPPORTED/test",
-    
-    "arn:aws:s3:::UNSUPPORTED:abcdefgh1234",
+    "arn:aws:iam::123456789012:UNSUPPORTED/test": null,
 
-    "arn:aws:route53:::UNSUPPORTED/12345ABCDEFGHI",
+    "arn:aws:s3:::UNSUPPORTED:abcdefgh1234": null,
 
-    "arn:aws:acm:us-east-1:123456789012:UNSUPPORTED/1f6ee793-4064-4a10-9567-f03875640b35",
+    "arn:aws:route53:::UNSUPPORTED/12345ABCDEFGHI": null,
 
-    "arn:aws:ec2:us-east-1:123456789012:UNSUPPORTED/1234",
+    "arn:aws:acm:us-east-1:123456789012:UNSUPPORTED/1f6ee793-4064-4a10-9567-f03875640b35": null,
 
-    "arn:aws-us-gov:iam::123456789012:user''''''test",
+    "arn:aws:ec2:us-east-1:123456789012:UNSUPPORTED/1234": null,
 
-    "arn:aws:ec2:us-east-1:123456789012:instance/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxy",
+    "arn:aws-us-gov:iam::123456789012:user''''''test": null,
 
-    "arn:aws:ec2:us-ea:st-1:123456789012:instance/asdf",
-    "arn:aws:ec2:us-ea/st-1:123456789012:instance/asdf",
-    "arn:aws:ec2:us-ea+st-1:123456789012:instance/asdf",
-    "arn:aws:ec2:us-ea=st-1:123456789012:instance/asdf",
-    "arn:aws:ec2:us-ea,st-1:123456789012:instance/asdf",
-    "arn:aws:ec2:us-ea.st-1:123456789012:instance/asdf",
-    "arn:aws:ec2:us-ea@st-1:123456789012:instance/asdf",
-    "arn:aws:ec2:us-ea st-1:123456789012:instance/asdf",
-    "arn:aws:ec2:us-ea*st-1:123456789012:instance/asdf",
-    "arn:aws:ec2:us-ea#st-1:123456789012:instance/asdf",
-    "arn:aws:ec2:us-ea\\st-1:123456789012:instance/asdf",
-    "arn:aws:secretsmanager:us-west-2:123456789012:secret:MySecret9A3F29-adf"
-]
+    "arn:aws:ec2:us-east-1:123456789012:instance/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxy": null,
+
+    "arn:aws:ec2:us-ea:st-1:123456789012:instance/asdf": null,
+    "arn:aws:ec2:us-ea/st-1:123456789012:instance/asdf": null,
+    "arn:aws:ec2:us-ea+st-1:123456789012:instance/asdf": null,
+    "arn:aws:ec2:us-ea=st-1:123456789012:instance/asdf": null,
+    "arn:aws:ec2:us-ea,st-1:123456789012:instance/asdf": null,
+    "arn:aws:ec2:us-ea.st-1:123456789012:instance/asdf": null,
+    "arn:aws:ec2:us-ea@st-1:123456789012:instance/asdf": null,
+    "arn:aws:ec2:us-ea st-1:123456789012:instance/asdf": null,
+    "arn:aws:ec2:us-ea*st-1:123456789012:instance/asdf": null,
+    "arn:aws:ec2:us-ea#st-1:123456789012:instance/asdf": null,
+    "arn:aws:ec2:us-ea\\st-1:123456789012:instance/asdf": null,
+    "arn:aws:secretsmanager:us-west-2:123456789012:secret:MySecret9A3F29-adf": null
+}

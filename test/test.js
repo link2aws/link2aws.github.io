@@ -102,7 +102,7 @@ describe('main.ARN', function () {
                 assert.equal(new main.ARN(testcase).consoleLink, expected);
             })
         }
-        for (const testcase of awsNegativeTests) {
+        for (const [testcase, expected] of Object.entries(awsNegativeTests)) {
             it(`should throw for: "${testcase}"`, () => {
                 assert.throws(() => { new main.ARN(testcase).consoleLink }, Error);
             })
