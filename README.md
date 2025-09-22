@@ -84,3 +84,7 @@ Pull requests welcome!
 npm install
 node_modules/nyc/bin/nyc.js --reporter=text node_modules/mocha/bin/mocha test/test.js
 ```
+
+## Other languages
+
+Also see our [Rust library](https://crates.io/crates/link2aws).
