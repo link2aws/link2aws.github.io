@@ -169,7 +169,7 @@ class ARN {
                 "analyzer": () => `https://${this.region}.${this.console}/access-analyzer/home?region=${this.region}#/analyzer/${this.resource}`,
             },
             "acm": { // AWS Certificate Manager
-                "certificate": () => `https://${this.console}/acm/home?region=${this.region}#/?id=${this.resource}`,
+                "certificate": () => `https://${this.console}/acm/home?region=${this.region}#/certificates/${this.resource}`,
             },
             "acm-pca": { // AWS Certificate Manager Private Certificate Authority
                 "certificate-authority": null,
@@ -292,7 +292,7 @@ class ARN {
             },
             "codebuild": { // AWS CodeBuild
                 "build": null,
-                "project": null,
+                "project": () => `https://${this.region}.${this.console}/codesuite/codebuild/projects/${this.resource}`,
                 "report": null,
                 "report-group": null,
             },
@@ -440,6 +440,7 @@ class ARN {
                 "dedicated-host": null,
                 "dhcp-options": null,
                 "elastic-gpu": null,
+                "eip-allocation": () => `https://${this.region}.${this.console}/ec2/home?region=${this.region}#Addresses:v=3;search=:${this.resource}`,
                 "fpga-image": null,
                 "image": () => `https://${this.region}.${this.console}/ec2/home?region=${this.region}#ImageDetails:imageId=${this.resource}`,
                 "instance": () => `https://${this.region}.${this.console}/ec2/home?region=${this.region}#InstanceDetails:instanceId=${this.resource}`,
@@ -480,7 +481,7 @@ class ARN {
                 "vpn-gateway": null,
             },
             "ecr": { // Amazon Elastic Container Registry
-                "repository": null,
+                "repository": () => `https://${this.region}.${this.console}/ecr/repositories/private/${this.account}/${this.resource}`,
             },
             "ecs": { // Amazon Elastic Container Service
                 "cluster": () => `https://${this.region}.${this.console}/ecs/v2/clusters/${this.resource}?region=${this.region}`,
@@ -507,7 +508,7 @@ class ARN {
                 "application": null,
                 "applicationversion": null,
                 "configurationtemplate": null,
-                "environment": null,
+                "environment": () => `https://${this.region}.${this.console}/elasticbeanstalk/home?region=${this.region}#/environments`,
                 "platform": null,
                 "solutionstack": null,
             },
@@ -531,7 +532,7 @@ class ARN {
                 "preset": null,
             },
             "es": { // Amazon Elasticsearch Service
-                "domain": null,
+                "domain": () => `https://${this.region}.${this.console}/aos/home?region=${this.region}#opensearch/domains/${this.resource}`,
             },
             "events": { // Amazon EventBridge
                 "event-bus": null,
@@ -584,7 +585,7 @@ class ARN {
                 "crawler": null,
                 "database": null,
                 "devendpoint": null,
-                "job": null,
+                "job": () => `https://${this.region}.${this.console}/gluestudio/home?region=${this.region}#/editor/job/${this.resource}/script`,
                 "mlTransform": null,
                 "table": null,
                 "tableVersion": null,
@@ -875,7 +876,7 @@ class ARN {
                 "cluster": () => `https://${this.console}/rds/home?region=${this.region}#database:id=${this.resource};is-cluster=true`,
                 "cluster-endpoint": null,
                 "cluster-pg": null,
-                "cluster-snapshot": null,
+                "cluster-snapshot": () => `https://${this.console}/rds/home?region=${this.region}#db-snapshot:id=${this.resource}`,
                 "db": () => `https://${this.console}/rds/home?region=${this.region}#database:id=${this.resource}`,
                 "db-proxy": null,
                 "es": null,

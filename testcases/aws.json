@@ -4,7 +4,7 @@
 
     "arn:aws:access-analyzer:us-west-1:123456789012:analyzer/ConsoleAnalyzer-a1e73456-f62e-4803-abc0-df02b4241122": "https://us-west-1.console.aws.amazon.com/access-analyzer/home?region=us-west-1#/analyzer/ConsoleAnalyzer-a1e73456-f62e-4803-abc0-df02b4241122",
 
-    "arn:aws:acm:us-east-1:123456789012:certificate/1f6ee793-4064-4a10-9567-f03875640b35": "https://console.aws.amazon.com/acm/home?region=us-east-1#/?id=1f6ee793-4064-4a10-9567-f03875640b35",
+    "arn:aws:acm:us-east-1:123456789012:certificate/1f6ee793-4064-4a10-9567-f03875640b35": "https://console.aws.amazon.com/acm/home?region=us-east-1#/certificates/1f6ee793-4064-4a10-9567-f03875640b35",
 
     "arn:aws:apigateway:us-west-1::/restapis/abc123defg": "https://us-west-1.console.aws.amazon.com/apigateway/main/apis/abc123defg/resources?api=abc123defg&region=us-west-1",
 
@@ -12,12 +12,15 @@
     "arn:aws:ec2:us-east-1:123456789012:instance/1234": "https://us-east-1.console.aws.amazon.com/ec2/home?region=us-east-1#InstanceDetails:instanceId=1234",
     "arn:aws:ec2:us-east-1:123456789012:natgateway/nat-123456": "https://us-east-1.console.aws.amazon.com/vpcconsole/home?region=us-east-1#NatGatewayDetails:natGatewayId=nat-123456",
     "arn:aws:ec2:us-east-1:123456789012:launch-template/lt-123456": "https://us-east-1.console.aws.amazon.com/ec2/home?region=us-east-1#LaunchTemplateDetails:launchTemplateId=lt-123456",
+    "arn:aws:ec2:us-east-1:123456789012:eip-allocation/eipalloc-1234567890abcdef0": "https://us-east-1.console.aws.amazon.com/ec2/home?region=us-east-1#Addresses:v=3;search=:eipalloc-1234567890abcdef0",
     "arn:aws:ec2:us-east-1:123456789012:subnet/subnet-12345612312312312" : "https://us-east-1.console.aws.amazon.com/vpc/home?region=us-east-1#SubnetDetails:subnetId=subnet-12345612312312312",
     "arn:aws:ec2:us-east-1:123456789012:security-group/sg-12345123123123123": "https://us-east-1.console.aws.amazon.com/vpc/home?region=us-east-1#SecurityGroup:groupId=sg-12345123123123123",
     "arn:aws:ec2:us-east-1:123456789012:snapshot/snap-123456": "https://us-east-1.console.aws.amazon.com/ec2/home?region=us-east-1#SnapshotDetails:snapshotId=snap-123456",
     "arn:aws:ec2:us-east-1:123456789012:volume/vol-123456" : "https://us-east-1.console.aws.amazon.com/ec2/home?region=us-east-1#VolumeDetails:volumeId=vol-123456",
     "arn:aws:ec2:us-east-1:123456789012:vpc/vpc-5432109876" : "https://us-east-1.console.aws.amazon.com/vpc/home?region=us-east-1#VpcDetails:VpcId=vpc-5432109876",
     "arn:aws:ec2:us-east-1:123456789012:vpc-endpoint/vpce-123456": "https://us-east-1.console.aws.amazon.com/vpcconsole/home?region=us-east-1#EndpointDetails:vpcEndpointId=vpce-123456",
+
+    "arn:aws:ecr:us-east-1:123456789012:repository/test-repository": "https://us-east-1.console.aws.amazon.com/ecr/repositories/private/123456789012/test-repository",
 
     "arn:aws:ecs:us-east-1:123456789012:cluster/mycluster": "https://us-east-1.console.aws.amazon.com/ecs/v2/clusters/mycluster?region=us-east-1",
     "arn:aws:ecs:us-east-1:123456789012:task/mycluster/581a40b2431e6c9c23834b0760666c36": "https://us-east-1.console.aws.amazon.com/ecs/v2/clusters/mycluster/tasks/581a40b2431e6c9c23834b0760666c36?region=us-east-1",
@@ -59,6 +62,8 @@
     "arn:aws:amplify:sa-east-1:384862141196:apps/aaaaaaaaa/branches/master/jobs/00000001810": "https://sa-east-1.console.aws.amazon.com/amplify/home?region=sa-east-1#/aaaaaaaaa/master/1810",
     "arn:aws:amplify:sa-east-1:384862141196:apps/test-null-path": null,
     
+    "arn:aws:codebuild:us-east-1:123456789012:project/test-project": "https://us-east-1.console.aws.amazon.com/codesuite/codebuild/projects/test-project",
+
     "arn:aws:codepipeline:us-east-1:115131055398:my-pipeline": "https://us-east-1.console.aws.amazon.com/codesuite/codepipeline/pipelines/my-pipeline/view?region=us-east-1",
     
     "arn:aws:cloudfront::123456789012:distribution/E2YDLZ26QPSF11": "https://console.aws.amazon.com/cloudfront/v4/home#/distributions/E2YDLZ26QPSF11",
@@ -75,17 +80,21 @@
     "arn:aws:rds:us-east-1:123456789012:subgrp:test-db": "https://console.aws.amazon.com/rds/home?region=us-east-1#db-subnet-group:id=test-db",
     "arn:aws:rds:us-east-1:123456789012:og:test-db": "https://console.aws.amazon.com/rds/home?region=us-east-1#option-group-details:option-group-name=test-db",
     "arn:aws:rds:us-east-1:123456789012:cluster:test-cluster": "https://console.aws.amazon.com/rds/home?region=us-east-1#database:id=test-cluster;is-cluster=true",
+    "arn:aws:rds:us-east-1:123456789012:cluster-snapshot:test-cluster-snapshot": "https://console.aws.amazon.com/rds/home?region=us-east-1#db-snapshot:id=test-cluster-snapshot",
 
     "arn:aws:kms:us-east-1:123456789012:key/4bd42b4b-af95-4698-b685-58d3296890fe": "https://console.aws.amazon.com/kms/home?region=us-east-1#/kms/keys/4bd42b4b-af95-4698-b685-58d3296890fe",
 
     "arn:aws:eks:us-east-1:123456789012:cluster/test-cluster": "https://console.aws.amazon.com/eks/home?region=us-east-1#/clusters/test-cluster",
     "arn:aws:eks:us-east-1:123456789012:nodegroup/test-cluster/test-workers/a2c51527-da50-031f-1130-c5d5d77be06c": "https://console.aws.amazon.com/eks/home?region=us-east-1#/clusters/test-cluster/nodegroups/test-workers",
+    "arn:aws:elasticbeanstalk:us-east-1:123456789012:environment/test-app/test-env": "https://us-east-1.console.aws.amazon.com/elasticbeanstalk/home?region=us-east-1#/environments",
+    "arn:aws:es:us-east-1:123456789012:domain/test-domain": "https://us-east-1.console.aws.amazon.com/aos/home?region=us-east-1#opensearch/domains/test-domain",
 
     "arn:aws:elasticloadbalancing:us-east-1:1234:loadbalancer/net/k8s-devops-ingressn-5a6b7c/8d9e0f": "https://us-east-1.console.aws.amazon.com/ec2/home?region=us-east-1#LoadBalancer:loadBalancerArn=arn:aws:elasticloadbalancing:us-east-1:1234:loadbalancer/net/k8s-devops-ingressn-5a6b7c/8d9e0f",
 
     "arn:aws:backup:us-east-1:123456789012:backup-vault:backups-primary": "https://console.aws.amazon.com/backup/home?region=us-east-1#/backupvaults/details/backups-primary",
 
     "arn:aws:firehose:us-east-1:123456789012:deliverystream/test-stream": "https://console.aws.amazon.com/firehose/home?region=us-east-1#/details/test-stream/monitoring",
+    "arn:aws:glue:us-east-1:123456789012:job/test-job": "https://us-east-1.console.aws.amazon.com/gluestudio/home?region=us-east-1#/editor/job/test-job/script",
     "arn:aws:kinesis:us-east-1:123456789012:stream/test-stream": "https://us-east-1.console.aws.amazon.com/kinesis/home?region=us-east-1#/streams/details/test-stream/details",
 
     "arn:aws:codeconnections:us-west-2:384862141196:connection/f8234ecc-8990-4e63-b25a-ec36764b7701": "https://us-west-2.console.aws.amazon.com/codesuite/settings/384862141196/us-west-2/codeconnections/connections/f8234ecc-8990-4e63-b25a-ec36764b7701",
