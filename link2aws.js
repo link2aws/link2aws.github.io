@@ -876,7 +876,7 @@ class ARN {
                 "cluster": () => `https://${this.console}/rds/home?region=${this.region}#database:id=${this.resource};is-cluster=true`,
                 "cluster-endpoint": null,
                 "cluster-pg": null,
-                "cluster-snapshot": null,
+                "cluster-snapshot": () => `https://${this.console}/rds/home?region=${this.region}#db-snapshot:id=${this.resource}`,
                 "db": () => `https://${this.console}/rds/home?region=${this.region}#database:id=${this.resource}`,
                 "db-proxy": null,
                 "es": null,
