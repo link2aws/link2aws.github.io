@@ -481,7 +481,7 @@ class ARN {
                 "vpn-gateway": null,
             },
             "ecr": { // Amazon Elastic Container Registry
-                "repository": null,
+                "repository": () => `https://${this.region}.${this.console}/ecr/repositories/private/${this.account}/${this.resource}`,
             },
             "ecs": { // Amazon Elastic Container Service
                 "cluster": () => `https://${this.region}.${this.console}/ecs/v2/clusters/${this.resource}?region=${this.region}`,
