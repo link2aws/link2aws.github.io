@@ -169,7 +169,7 @@ class ARN {
                 "analyzer": () => `https://${this.region}.${this.console}/access-analyzer/home?region=${this.region}#/analyzer/${this.resource}`,
             },
             "acm": { // AWS Certificate Manager
-                "certificate": () => `https://${this.console}/acm/home?region=${this.region}#/?id=${this.resource}`,
+                "certificate": () => `https://${this.console}/acm/home?region=${this.region}#/certificates/${this.resource}`,
             },
             "acm-pca": { // AWS Certificate Manager Private Certificate Authority
                 "certificate-authority": null,
