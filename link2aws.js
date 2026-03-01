@@ -585,7 +585,7 @@ class ARN {
                 "crawler": null,
                 "database": null,
                 "devendpoint": null,
-                "job": null,
+                "job": () => `https://${this.region}.${this.console}/gluestudio/home?region=${this.region}#/editor/job/${this.resource}/script`,
                 "mlTransform": null,
                 "table": null,
                 "tableVersion": null,
