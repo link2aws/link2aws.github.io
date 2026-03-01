@@ -508,7 +508,7 @@ class ARN {
                 "application": null,
                 "applicationversion": null,
                 "configurationtemplate": null,
-                "environment": null,
+                "environment": () => `https://${this.region}.${this.console}/elasticbeanstalk/home?region=${this.region}#/environments`,
                 "platform": null,
                 "solutionstack": null,
             },
