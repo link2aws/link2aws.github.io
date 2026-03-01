@@ -440,6 +440,7 @@ class ARN {
                 "dedicated-host": null,
                 "dhcp-options": null,
                 "elastic-gpu": null,
+                "eip-allocation": () => `https://${this.region}.${this.console}/ec2/home?region=${this.region}#Addresses:v=3;search=:${this.resource}`,
                 "fpga-image": null,
                 "image": () => `https://${this.region}.${this.console}/ec2/home?region=${this.region}#ImageDetails:imageId=${this.resource}`,
                 "instance": () => `https://${this.region}.${this.console}/ec2/home?region=${this.region}#InstanceDetails:instanceId=${this.resource}`,
