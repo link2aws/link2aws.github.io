@@ -292,7 +292,7 @@ class ARN {
             },
             "codebuild": { // AWS CodeBuild
                 "build": null,
-                "project": null,
+                "project": () => `https://${this.region}.${this.console}/codesuite/codebuild/projects/${this.resource}`,
                 "report": null,
                 "report-group": null,
             },
