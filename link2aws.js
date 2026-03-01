@@ -532,7 +532,7 @@ class ARN {
                 "preset": null,
             },
             "es": { // Amazon Elasticsearch Service
-                "domain": null,
+                "domain": () => `https://${this.region}.${this.console}/aos/home?region=${this.region}#opensearch/domains/${this.resource}`,
             },
             "events": { // Amazon EventBridge
                 "event-bus": null,

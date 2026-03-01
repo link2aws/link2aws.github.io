@@ -86,6 +86,7 @@
     "arn:aws:eks:us-east-1:123456789012:cluster/test-cluster": "https://console.aws.amazon.com/eks/home?region=us-east-1#/clusters/test-cluster",
     "arn:aws:eks:us-east-1:123456789012:nodegroup/test-cluster/test-workers/a2c51527-da50-031f-1130-c5d5d77be06c": "https://console.aws.amazon.com/eks/home?region=us-east-1#/clusters/test-cluster/nodegroups/test-workers",
     "arn:aws:elasticbeanstalk:us-east-1:123456789012:environment/test-app/test-env": "https://us-east-1.console.aws.amazon.com/elasticbeanstalk/home?region=us-east-1#/environments",
+    "arn:aws:es:us-east-1:123456789012:domain/test-domain": "https://us-east-1.console.aws.amazon.com/aos/home?region=us-east-1#opensearch/domains/test-domain",
 
     "arn:aws:elasticloadbalancing:us-east-1:1234:loadbalancer/net/k8s-devops-ingressn-5a6b7c/8d9e0f": "https://us-east-1.console.aws.amazon.com/ec2/home?region=us-east-1#LoadBalancer:loadBalancerArn=arn:aws:elasticloadbalancing:us-east-1:1234:loadbalancer/net/k8s-devops-ingressn-5a6b7c/8d9e0f",
 
