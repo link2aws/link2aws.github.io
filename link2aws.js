@@ -520,7 +520,7 @@ class ARN {
                 "listener": null,
                 "listener-rule": null,
                 "loadbalancer": () => `https://${this.region}.${this.console}/ec2/home?region=${this.region}#LoadBalancer:loadBalancerArn=${this.arn}`,
-                "targetgroup": null,
+                "targetgroup": () => `https://${this.account}.${this.region}.${this.console}/ec2/home?region=${this.region}#TargetGroup:targetGroupArn=${this.arn}`,
             },
             "elasticmapreduce": { // Amazon Elastic MapReduce
                 "cluster": null,
